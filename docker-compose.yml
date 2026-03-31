@@ -1,0 +1,44 @@
+services:
+  # --- BACKEND: FastAPI Service ---
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ctu-chatbot-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    # Load toàn bộ biến môi trường từ file .env (Bảo mật)
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data         # Mount dữ liệu để cập nhật không cần rebuild
+      - ./logs:/app/logs         # Lưu log ra ngoài để theo dõi
+    networks:
+      - chatbot-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # --- FRONTEND: Flutter Web (Nginx) ---
+  frontend:
+    image: nginx:alpine
+    container_name: ctu-chatbot-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      # Build Flutter xong mới mount vào đây
+      - ./flutter_chatbot_app/build/web:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      backend:
+        condition: service_healthy # Chỉ chạy khi backend đã sẵn sàng
+    networks:
+      - chatbot-network
+
+networks:
+  chatbot-network:
+    driver: bridge
