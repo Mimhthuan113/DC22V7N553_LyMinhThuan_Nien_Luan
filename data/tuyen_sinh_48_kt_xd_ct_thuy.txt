@@ -1,0 +1,36 @@
+=== DỮ LIỆU TUYỂN SINH: 48_KT_XD_CT_THUY ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+- Tên
+ngành
+Kỹ thuật xây dựng công trình thủy
+- Thời
+gian
+đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+“Kỹ thuật xây dựng công trình thủy” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã ngành tuyển sinh:
+7580202
+- Các
+tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Vẽ mỹ thuật (V00); Toán, Vật lí, Công nghệ công nghiệp (X07).
+Giới thiệu
+- Ngành Kỹ thuật xây dựng công trình thủy đào tạo kỹ sư có năng lực khảo sát, thiết kế, thi công, quản lý và vận hành các công trình thủy lợi; đáp ứng nhu cầu lao động có trình độ kỹ thuật cao cho khu vực Đồng bằng sông Cửu Long (ĐBSCL) và cả nước.
+Vị trí việc làm
+- Giảng viên, nghiên cứu viên, cán bộ nghiên cứu về lĩnh vực xây dựng nói chung và xây dựng công trình thủy lợi nói riêng;;
+- Kỹ sư tư vấn, thiết kế, thi công và dự toán công trình cho các công trình xây dựng nói chung, công trình thủy lợi nói riêng;
+- Kỹ sư, cán bộ kỹ thuật, cán bộ quản lý dự án xây dựng nói chung, dự án công trình thủy lợi nói riêng;
+- Kỹ sư, cán bộ giám sát thi công cho các dự án xây dựng nói chung, công trình thủy lợi nói riêng;
+Nơi làm việc
+- Các Sở, Phòng, Ban quản lý về xây dựng cơ bản: Sở Xây dựng, Sở Nông nghiệp và Phát triển Nông thôn, Ban quản lý dự án công trình thủy lợi các cấp, Phòng kinh tế - kỹ thuật - hạ tầng của các Huyện;;
+- Các công ty tư vấn khảo sát, thiết kế, thi công và quản lý dự án xây dựng;
+- Các trung tâm, phòng thí nghiệm chuyên ngành xây dựng;
+- Công ty thầu xây dựng tư nhân;
+- Các Viện/Trung tâm nghiên cứu, trường Đại học, Cao đẳng và Trung học về lĩnh vực xây dựng.
+→ Chuẩn đầu ra

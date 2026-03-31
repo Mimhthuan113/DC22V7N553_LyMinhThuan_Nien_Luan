@@ -1,0 +1,30 @@
+=== DỮ LIỆU TUYỂN SINH: 143_SP_TOAN_HOC ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+ngành:
+Sư phạm Toán học
+Thời gian đào tạo:
+4 năm
+; Danh hiệu cấp bằng:
+Cử nhân
+Tên ngành “Sư phạm Toán học” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7140209
+Các tổ hợp xét tuyển:
+Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Sinh học, Tiếng Anh (B08); Toán, Hóa học, Tiếng Anh (D07).
+Giới thiệu
+Toán học là môn khoa học nghiên cứu về các số, không gian, các phép biến đổi, các cấu trúc trừu tượng định nghĩa từ các tiên đề, bằng cách sử dụng lý luận logic và các ký hiệu toán học. Chuyên ngành Sư phạm Toán học là ngành đào tạo giáo viên bậc phổ thông có kiến thức về khoa học cơ bản, khoa học giáo dục, có năng lực sư phạm đáp ứng được yêu cầu của sự nghiệp đổi mới giáo dục, đào tạo hiện nay ở nước ta; đồng thời có thể học tiếp lên bậc cao hơn và tự học để hoàn thiện và nâng cao năng lực làm việc.
+Chương trình đào tạo ngành Sư phạm Toán học, sinh viên có kiến thức lý thuyết chuyên sâu trong lĩnh vực đào tạo; nắm vững kỹ thuật và có kiến thức thực tế để có thể giải quyết các công việc phức tạp; tích luỹ được kiến thức nền tảng về các nguyên lý cơ bản, các quy luật tự nhiên và xã hội trong lĩnh vực được đào tạo để phát triển kiến thức mới và có thể tiếp tục học tập ở trình độ cao hơn; có kiến thức quản lý, điều hành, kiến thức pháp luật và bảo vệ môi trường liên quan đến lĩnh vực được đào tạo.
+Vị trí việc làm
+- Giáo viên giảng dạy Toán tại nhà trường phổ thông.
+- Giảng viên giảng dạy và nghiên cứu Toán ở các trường cao đẳng và đại học.
+- Công tác giảng dạy và quản lí tại các phòng giáo dục, các trung tâm giáo dục thường xuyên.
+- Làm công tác nghiên cứu về toán các viện, trung tâm nghiên cứu toán học.
+Nơi làm việc
+- Các trường trung học cơ sở, trung học phổ thông, trung tâm giáo dục thường xuyên và dạy nghề.
+- Các trường trung cấp, cao đẳng và đại học.
+- Các viện nghiên cứu về Toán.
+→ Chuẩn đầu ra

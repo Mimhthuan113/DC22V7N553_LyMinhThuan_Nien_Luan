@@ -1,0 +1,45 @@
+=== DỮ LIỆU TUYỂN SINH: 51_KT_XAY_DUNG ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+- Tên
+ngành
+Kỹ thuật xây dựng
+- Thời
+gian
+đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+“Kỹ thuật xây dựng” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp. Tên chuyên ngành “” được ghi trên bảng điểm và quyết định tốt nghiệp.
+- Mã ngành
+tuyển
+sinh:
+7580201
+- Các tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Vẽ mỹ thuật (V00); Toán, Vật lí, Công nghệ công nghiệp (X07).
+Giới thiệu
+- Ngành Kỹ thuật xây dựng là một ngành kỹ thuật đào tạo kỹ sư về qui hoạch, thiết kế, thi công và quản lý công trình xây dựng dân dụng và công nghiệp.
+- Sinh viên được trang bị những kiến thức và năng lực về: Qui hoạch, khảo sát thiết kế, thi công, quản lý và vận hành các công trình xây dựng dân dụng và công nghiệp. Ngành Kỹ thuật xây dựng còn trang bị cho người học những kiến thức cơ bản thuộc chuyên ngành gần, chuyên ngành rộng, như:
+Qui hoạch và quản lý đô thị và vùng, Kỹ thuật xây dựng công trình giao thông, Xây dựng công trình thủy, Kiến trúc,
+Cấp thoát nước,
+Kỹ thuật tài nguyên nước
+Kỹ thuật môi trường.
+Vị trí việc làm
+- Giảng viên, nghiên cứu viên, cán bộ nghiên cứu về lĩnh vực xây dựng;
+- Kỹ sư quản lý công trình xây dựng cơ bản;
+- Cán bộ quản lý kỹ thuật, giám sát thi công cho các công trình xây dựng;
+- Kỹ sư tư vấn thiết kế, thi công các công trình xây dựng;
+- Kỹ sư thiết kế, thi công, dự toán các công trình xây dựng dân dụng & công nghiệp;
+- Nhà thầu xây dựng tư nhân.
+Nơi làm việc
+- Các Sở, Phòng, Ban quản lý về xây dựng cơ bản, như: Sở xây dựng, Ban quản lý dự án công trình xây dựng các cấp, Phòng kinh tế-kỹ thuật-hạ tầng của các Huyện;
+- Các công ty tư vấn khảo sát, thiết kế, thi công và quản lý dự án xây dựng;
+- Quản lý xây dựng cơ bản ở các cơ quan, xí nghiệp sản xuất;
+- Các trung tâm, phòng thí nghiệm chuyên ngành xây dựng;
+- Các, trường Đại học, Cao Đẳng và Trung học chuyên nghiệp và Viện nghiên cứu về lĩnh vực xây dựng;
+- Công ty thầu xây dựng tư nhân.
+→ Chuẩn đầu ra

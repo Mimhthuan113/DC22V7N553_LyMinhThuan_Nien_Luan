@@ -1,0 +1,46 @@
+=== DỮ LIỆU TUYỂN SINH: 43_KT_CO_DIEN_TU ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+ngành:
+Kỹ thuật cơ điện tử
+- Thời
+gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+- Tên
+ngành
+“Kỹ thuật cơ điện tử” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã
+tuyển sinh:
+7520114
+- Các
+tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Hóa học, Tiếng Anh (D07); Toán, Vật lí, Tin học (X06).
+Giới thiệu
+- Ngành Kỹ thuật Cơ điện tử
+đào tạo kỹ sư có khả năng phân tích, đánh giá, sửa chữa, tư vấn, bảo trì, phát triển và thiết kế các hệ thống liên quan đến Cơ điện tử; tương tác được với các hệ thống Cơ điện tử trong thực tế sản xuất.
+- Ngành học trang bị cho sinh viên các kiến thức cơ sở ngành và chuyên ngành liên quan đến lĩnh vực cơ khí, điện tử, kỹ thuật điều khiển, tin học: thiết kế cơ khí, thiết kế chi tiết máy, công nghệ gia công cơ khí; Điện tử và mạch điện tử, lập trình điều khiển mềm dẻo (PLC), Kỹ thuật vi điều khiển, Lý thuyết điều khiển tự động, Kỹ thuật điều khiển, Lập trình điều khiển bằng MATLAB, LabView, IoT; thiết kế hệ thống cơ điện tử, kỹ thuật robot, lập trình nhúng và những kiến thức liên quan khác.
+Vị trí việc làm
+- Kỹ sư nghiên cứu hệ thống liên quan đến cơ điện tử,
+- Kỹ sư thiết kế hệ thống liên quan đến cơ điện tử,
+- Kỹ sư tư vấn kỹ thuật và bảo trì hệ thống thiết bị thuộc lĩnh vực cơ điện tử,
+- Kỹ sư vận hành hệ thống sản xuất,
+- Kỹ sư quản lý hệ thống liên quan đến kỹ thuật cơ điện tử,
+- Kỹ sư phát triển các dự án thuộc lĩnh vực cơ điện tử và kỹ thuật điều khiển,
+- Nghiên cứu viên, giảng viên tại các Trường ĐH, Cao đẳng trong lĩnh vực kỹ thuật cơ điện tử.
+Nơi làm việc
+- Công ty/doanh nghiệp chuyên về thiết kế, sản xuất hệ thống cơ khí, cơ điện tử.
+- Sở công thương, Sở KH&CN, khu chế xuất, khu công nghiệp.
+- Viện, t
+rung tâm
+nghiên cứu, cơ sở đào tạo, các trường đại học, cao đẳng, trung học chuyên nghiệp,…có chức năng nghiên cứu, đào tạo và chuyển giao công nghệ liên quan đến lĩnh vực cơ điện tử và điều khiển.
+- Công ty/doanh nghiệp sản xuất các thiết bị hay hệ thống cơ điện tử.
+- Công ty/đơn vị kinh doanh thiết bị và máy móc liên quan đến cơ điện tử.
+- Các công ty, doanh nghiệp nước ngoài, tập đoàn đa quốc gia.
+- Xuất khẩu lao động ở Nhật Bản.
+→ Chuẩn đầu ra

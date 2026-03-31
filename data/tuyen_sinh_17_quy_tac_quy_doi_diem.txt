@@ -1,0 +1,22 @@
+=== DỮ LIỆU TUYỂN SINH: 17_QUY_TAC_QUY_DOI_DIEM ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+QUY TẮC QUY ĐỔI ĐIỂM TRONG TUYỂN SINH ĐẠI HỌC CHÍNH QUY NĂM 2026
+- Điểm thi tốt nghiệp THPT, điểm các môn năng khiếu không quy đổi.
+- Điểm mỗi môn của học bạ hoặc điểm V-SAT được quy đổi tương đương với điểm THPT
+năm 2026
+theo công thức nội suy tuyến tính:
+trong đó:
+: điểm học bạ hoặc điểm V-SAT của thí sinh;
+a, b
+: Biên của khoảng điểm học bạ hoặc V-SAT (a 90%
+1,99 80%
+64,0 < x ≤ 74,0
+6,4 < y ≤ 7,0
+Do x = 100 trong khoảng 99,5 < x ≤ 106,0 thuộc tốp 40% nên a = 99,5 ; b = 106,0; c = 8,0 và d = 8,2. Áp dụng công thức nội suy tuyến tính, điểm quy đổi
+VM_Toán
+Vậy, điểm V-SAT môn Toán VM_Toán =
+100 điểm
+được quy đổi tương đương với điểm thi THPT là VM_Toán
+8,02 điểm

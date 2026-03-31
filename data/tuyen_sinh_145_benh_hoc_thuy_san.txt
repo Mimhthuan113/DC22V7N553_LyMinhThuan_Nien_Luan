@@ -1,0 +1,42 @@
+=== DỮ LIỆU TUYỂN SINH: 145_BENH_HOC_THUY_SAN ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+- Tên
+ngành
+Bệnh học thủy sản
+- Thời
+gian
+đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+“Bệnh học thủy sản” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã
+tuyển sinh:
+7620302
+- Các
+tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Hóa học, Sinh học (B00); Toán, Sinh học, Tiếng Anh (B08); Toán, Hóa học, Công nghệ nông nghiệp (X12).
+Giới thiệu
+Ngành bệnh học thủy sản đào tạo kỹ sư có khả năng
+xét nghiệm/chẩn đoán, phòng và trị một số bệnh phổ biến trên các đối tượng nuôi thủy sản, quản lý và vận hành cơ sở sản xuất và kinh doanh thủy sản, phòng thí nghiệm bệnh thủy sản và có khả năng tham gia ở lĩnh vực kinh doanh dịch vụ thuốc và hóa chất sử dụng trong nuôi trồng thủy sản.
+Sinh viên được học kiến thức về
+(i) chẩn đoán các bệnh thường gặp ở động vật thủy sản; (ii) xét nghiệm bệnh ở động vật thủy sản, (iii) quản lý dịch bệnh tổng hợp trong nuôi thủy sản; (iv) quản lý và sử dụng thuốc và hóa chất trong nuôi thủy sản. Đồng thời sinh viên còn có kiến thức về sản xuất giống và nuôi một số đối tượng nuôi thủy sản chủ lực như tôm biển, tôm càng xanh và cá tra.
+Vị trí việc làm
+- Kỹ sư chuyên về xét nghiệm/chẩn đoán bệnh thủy sản
+- Kỹ sư phụ trách bệnh thủy sản, quản lý các vùng nuôi thủy sản
+- Chủ cơ sở sản xuất và kinh doanh thủy sản;
+- Giảng viên các trường đại học, cao đăng, trung cấp đào tạo về thủy sản.
+Nơi làm việc
+Chi cục nuôi thủy sản
+Chi cục thú y.
+Trường đại học, cao đẳng, trung cấp,… đào tạo về thủy sản
+Các công ty sản xuất và kinh doanh giống thủy sản
+Các công ty sản xuất và kinh doanh thức ăn thủy sản
+Các công ty sản xuất và kinh doanh thuốc thú y thủy sản.
+Tự tổ chức sản xuất và kinh doanh thủy sản.
+→ Chuẩn đầu ra

@@ -1,0 +1,36 @@
+=== DỮ LIỆU TUYỂN SINH: 119_BV_THUC_VAT ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+Tên ngành:
+Bảo Vệ Thực Vật.
+- Thời
+gian
+đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+- Tên
+ngành
+“Bảo vệ thực vật” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã
+tuyển sinh:
+7620112
+- Các tổ hợp xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Hóa học, Sinh học (B00); Toán, Sinh học, Tiếng Anh (B08); Toán, Hóa học, Công nghệ nông nghiệp (X12).
+Giới thiệu
+- Ngành Bảo vệ Thực vật (BVTV) là ngành chuyên về lĩnh vực Bảo vệ Thực vật
+- Sinh viên theo học ngành BVTV sẽ được học kiến thức cơ bản ở bậc đại học; kiến thức cơ sở ngành về cây trồng, thổ nhưỡng, sinh lý sinh hoá thực vật và di truyền học thực vật; kiến thức chuyên ngành về côn trùng nông nghiệp, bệnh hại cây trồng, cỏ dại, hóa học bảo vệ thực vật, phòng trừ sinh học và quản lý dịch hại tổng hợp. Ngoài ra, sinh viên còn được rèn luyện kỹ năng nghề nghiệp thông qua các buổi thảo luận chuyên đề với đại diện của các doanh nghiệp kinh doanh nông nghiệp hàng đầu ở Việt Nam, thông qua tham quan học tập và thực tập cơ sở tại các trung tâm thực nghiệm nông nghiệp của doanh nghiệp và cơ quan nông nghiệp địa phương.
+Vị trí việc làm
+Kỹ sư phụ trách kỹ thuật tại các cơ quan quản lý nông nghiệp và doanh nghiệp sản xuất và kinh doanh nông nghiệp.
+Kỹ sư phụ trách kinh doanh tại các doanh nghiệp kinh doanh nông nghiệp.
+Nghiên cứu viên tại các trường đại học, viện nghiên cứu, trung tâm nghiên cứu nông nghiệp.
+Giảng viên tại các Trường Trung cấp và Cao đẳng Nông nghiệp.
+Học viên cao học (trình độ thạc sĩ) hoặc nghiên cứu sinh (trình độ tiến sĩ) thuộc chuyên ngành Bảo vệ Thực vật.
+Nơi làm việc
+Công ty, tập đoàn sản xuất và kinh doanh nông nghiệp, công ty thuốc BVTV.
+Cơ quan quản lý nông nghiệp như Sở Nông nghiệp & PTNT, Sở Khoa học và Công nghệ, Trung tâm Khuyến nông, Chi cục Trồng trọt & BVTV, Phòng Nông nghiệp & PTNT, Trạm Trồng trọt & BVTV, Trạm Kiểm dịch Thực vật.
+Viện nghiên cứu, trường trung cấp, cao đẳng và đại học thuộc lĩnh vực nông nghiệp.
+→ Chuẩn đầu ra

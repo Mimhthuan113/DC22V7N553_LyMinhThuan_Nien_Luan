@@ -1,0 +1,35 @@
+=== DỮ LIỆU TUYỂN SINH: 06_PHUONG_THUC_3 ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+PHƯƠNG THỨC 3:
+Xét điểm học tập cấp THPT - điểm học bạ
+Xét tuyển dựa vào Điểm trung bình môn cả năm (ĐTBMCN) lớp 10, 11, 12 của 3 môn trong tổ hợp xét tuyển
+(không nhân hệ số môn)
+ứng với ngành dự tuyển. Riêng các môn năng khiếu, sử dụng kết quả do ĐHCT hoặc do trường đại học khác tổ chức thi năm 2026 để xét tuyển vào đại học chính quy từ 5
+điểm trở lên. Không sử dụng điểm miễn môn ngoại ngữ.
+Điểm mỗi môn (gọi là
+) bằng trung bình cộng của ĐTBMCN của 3 năm học, được làm tròn đến hai chữ số thập phân (thang điểm 10) như sau:
+Lưu ý: Không sử dụng điểm kiểm tra lại. Đối với môn ngoại ngữ, chỉ sử dụng môn ngoại ngữ chính.
+Điểm HM được quy đổi tương đương với điểm thi tốt nghiệp THPT
+(gọi là HM
+theo
+quy tắc quy đổi điểm
+. Các môn năng khiếu không quy đổi tương đương.
+Điểm xét tuyển (ĐXT)
+bằng tổng điểm các môn
+tổ hợp xét tuyển đã quy đổi (HM_n
+); cộng với điểm ưu tiên. ĐXT được làm tròn đến hai chữ số thập phân và
+thang 30 điểm:
+ĐXT = (HM_1
++ HM_2
++ HM_3
+) + Điểm ưu tiên
+(ĐHCT sẽ chọn tổ hợp có ĐXT cao nhất để xét tuyển và không quy định độ lệch giữa các tổ hợp)
+Ngành xét tuyển:
+tất cả các ngành.
+Đối tượng:
+thí sinh tốt nghiệp THPT từ năm 2026 trở về trước. Người đã tốt nghiệp cao đẳng học liên thông đại học. Người đã tốt nghiệp đại học, học ngành đại học thứ 2.
+Điều kiện ĐKXT:
+ngưỡng đầu vào
+của phương thức xét học bạ và đối với thí sinh tốt nghiệp THPT năm 2026 phải có tổng điểm 3 môn thi tốt nghiệp THPT theo tổ hợp xét tuyển (hoặc Toán, Ngữ văn và một môn khác) đạt từ 15,0 điểm.

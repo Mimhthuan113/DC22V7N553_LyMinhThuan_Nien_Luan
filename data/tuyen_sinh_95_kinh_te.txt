@@ -1,0 +1,33 @@
+=== DỮ LIỆU TUYỂN SINH: 95_KINH_TE ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+ngành:
+Kinh tế
+Thời gian đào tạo:
+4 năm
+; Danh hiệu cấp bằng:
+Cử nhân
+Tên ngành “Kinh tế” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7310101
+Các tổ hợp xét tuyển:
+Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Ngữ văn, Toán, Hóa học (C02); Ngữ văn, Toán, Tiếng Anh (D01).
+Giới thiệu
+Chuyên ngành Kinh tế đào tạo cử nhân có kiến thức kinh tế học chuyên sâu, kinh tế tài nguyên, nắm vững các lĩnh vực ứng dụng của khoa học kinh tế. Sinh viên được học các kiến thức về phương pháp, kỹ thuật thu thập, xử lý và ghi nhận thông tin kinh tế trong doanh nghiệp, thông tin kinh tế vĩ mô. Được trang bị kiến thức và mô hình kinh tế để phân tích diễn biến và xu hướng vận động của các chỉ số kinh tế quan trọng của nền kinh tế. Có kiến thức về ứng dụng khoa học kinh tế trong các lĩnh vực kinh tế ứng dụng, kinh tế học hành vi, kinh tế vùng và kinh tế học đô thị.
+Vị trí việc làm
+- Nhân viên, cán bộ quản lý kinh tế;
+- Chuyên viên phân tích và tư vấn kinh tế;
+- Chuyên viên phân tích và tư vấn về chính sách tiền tệ, tài chính, ngoại thương;
+- Chuyên gia phân tích, tư vấn về chính sách kinh tế;
+- Nghiên cứu viên và giảng viên;
+- Chuyên viên các cơ quan quản lý nhà nước: Sở công thương, Sở kế hoạch và đầu tư, Ban quản lý khu chế xuất khu công nghiệp, Phòng thương mại công nghiệp Việt Nam.
+Nơi làm việc
+- Các doanh nghiệp, tổ chức kinh tế, đơn vị hành chính - sự nghiệp;
+- Các chương trình/dự án kinh tế - xã hội;
+- Các đơn vị cung cấp các dịch vụ tư vấn kinh tế và chính sách kinh tế;
+- Trường cao đẳng, đại học và các cơ sở nghiên cứu;
+- Các quan quản lý nhà nước, như: Sở công thương, Sở kế hoạch và đầu tư, Ban quản lý khu chế xuất khu công nghiệp, Phòng thương mại công nghiệp Việt Nam.
+→ Chuẩn đầu ra

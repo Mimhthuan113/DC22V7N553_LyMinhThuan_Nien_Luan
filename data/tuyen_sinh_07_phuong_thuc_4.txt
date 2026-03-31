@@ -1,0 +1,37 @@
+=== DỮ LIỆU TUYỂN SINH: 07_PHUONG_THUC_4 ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+PHƯƠNG THỨC 4:
+Xét điểm thi V-SAT
+Xét tuyển dựa vào điểm thi V-SAT của 3 môn trong tổ hợp xét tuyển
+(không nhân hệ số môn)
+ứng với ngành dự tuyển. Riêng các môn năng khiếu, sử dụng kết quả do ĐHCT hoặc do trường đại học khác tổ chức thi năm 2026 để xét tuyển vào đại học chính quy từ 5
+điểm trở lên. Không sử dụng điểm miễn môn ngoại ngữ.
+- Phương thức xét điểm V-SAT không sử dụng các tổ hợp có môn: Tiếng Pháp, Giáo dục Công dân, Giáo dục kinh tế pháp luật, Tin học, Công nghệ công nghiệp, Công nghệ nông nghiệp.
+- Thí sinh được sử dụng kết quả Kỳ thi V-SAT do các cơ sở giáo dục đại học tổ chức thi trong thời hạn 03 năm tính đến năm tuyển sinh. Ứng với mỗi môn, thí sinh được chọn điểm cao nhất nếu thi nhiều lần. Các môn trong tổ hợp có thể được thi ở các đợt khác nhau hay các cơ sở khác nhau.
+- Điểm mỗi môn V-SAT (gọi là VM,
+theo
+thang điểm 150) được quy đổi tương đương với điểm THPT
+(gọi là
+, thang điểm 10)
+quy tắc quy đổi điểm
+. Các môn năng khiếu không quy đổi tương đương.
+Điểm xét tuyển (ĐXT)
+bằng tổng điểm các môn
+tổ hợp xét tuyển đã quy đổi (VM_n
+); cộng với điểm ưu tiên. ĐXT được làm tròn đến hai chữ số thập phân và
+thang 30 điểm:
+ĐXT = (VM_1
++ VM_2
++ VM_3
+) + Điểm ưu tiên
+(ĐHCT sẽ chọn tổ hợp có ĐXT cao nhất để xét tuyển và không quy định độ lệch giữa các tổ hợp)
+Ngành xét tuyển:
+tất cả các ngành.
+Đối tượng:
+thí sinh tốt nghiệp THPT từ năm 2026 trở về trước. Người đã tốt nghiệp cao đẳng học liên thông đại học. Người đã tốt nghiệp đại học, học ngành đại học thứ 2.
+Điều kiện ĐKXT:
+ngưỡng đầu vào
+của phương thức xét điểm V-SAT và đối với thí sinh tốt nghiệp THPT năm 2026 phải có tổng điểm 3 môn thi tốt nghiệp THPT theo tổ hợp xét tuyển (hoặc Toán, Ngữ văn và một môn khác) đạt từ 15,0 điểm
+trở lên

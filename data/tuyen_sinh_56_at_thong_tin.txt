@@ -1,0 +1,35 @@
+=== DỮ LIỆU TUYỂN SINH: 56_AT_THONG_TIN ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung:
+ngành:
+An toàn thông tin
+Thời gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+Tên ngành “An toàn thông tin” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7480202
+- Các tổ hợp xét tuyển:
+Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Tin học (X06); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu:
+Ngành An toàn thông tin đào tạo kỹ sư có khả năng bảo vệ an toàn thông tin số, các hệ thống thông tin và hệ thống mạng; phòng ngừa, phát hiện, và ngăn chặn kịp thời các hoạt động truy cập, sửa đổi, phát tán, phá hoại, và tấn công bất hợp pháp nhằm vào hệ thống thông tin của một tổ chức; đề xuất các giải pháp bảo mật/an toàn thông tin đồng thời triển khai giám sát, đánh giá, kiểm định an toàn thông tin; xử lý các sự cố liên quan đến bảo mật, an toàn thông tin hệ thống.
+Sinh viên sẽ được trang bị đầy đủ kiến thức, tri thức, kỹ năng cần thiết về bảo mật/an ninh dữ liệu, hệ thống thông tin, và mạng máy tính; kiến thức chuyên sâu về kỹ thuật mật mã, an toàn hệ điều hành, cơ sở dữ liệu, an toàn các ứng dụng web và Internet, an toàn trong giao dịch và thương mại điện tử, các kỹ thuật tấn công và xâm nhập mạng, mô hình bảo vệ và các kỹ thuật phòng thủ chống tấn công đột nhập; khả năng phân tích và phán đoán tình huống, có kỹ năng lập trình, sử dụng thành thạo các công cụ, giải pháp tiên tiến để đảm bảo an toàn thông tin; thực hành các tình huống thực tế cho việc phòng chống, phát hiện, ngăn chặn các cuộc tấn công hệ thống.
+Vị trí việc làm:
+- Chuyên viên an toàn/bảo mật thông tin;
+- Nhân viên quản trị và an ninh mạng máy tính;
+- Chuyên viên điều tra tội phạm mạng và xử lý sự cố an toàn thông tin;
+- Chuyên viên vận hành giám sát an toàn thông tin;
+- Chuyên viên tư vấn, thiết kế, xây dựng các giải pháp về bảo mật công nghệ thông tin;
+- Lập trình viên trong các công ty thuộc lĩnh vực công nghệ thông tin.
+- Chủ công ty trong lĩnh vực công nghệ thông tin;
+- Giảng viên các trường đại học, cao đẳng, trung cấp đào tạo công nghệ thông tin.
+Nơi làm việc:
+- Cơ quan, tổ chức, và doanh nghiệp có triển khai các giải pháp công nghệ thông tin;
+- Cơ quan chuyên trách bảo mật thông tin, an ninh và phòng chống tội phạm mạng.
+- Công ty lập trình phần mềm;
+- Công ty tư vấn và triển khai các giải pháp công nghệ thông tin;
+- Các viện, trung tâm nghiên cứu và các trường đại học, cao đẳng, trung cấp, phổ thông.

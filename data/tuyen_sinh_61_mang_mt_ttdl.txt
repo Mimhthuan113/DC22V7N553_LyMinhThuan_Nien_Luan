@@ -1,0 +1,35 @@
+=== DỮ LIỆU TUYỂN SINH: 61_MANG_MT_TTDL ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+Tên ngành:
+Mạng máy tính và truyền thông dữ liệu
+Thời gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+Tên ngành “Mạng máy tính và truyền thông dữ liệu” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7480102
+- Các tổ hợp xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Tin học (X06); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu ngành đào tạo
+- Ngành Mạng máy tính và Truyền thông dữ liệu là một ngành nghiên cứu những nguyên lý kết nối các máy tính thành mạng; cách thiết kế, xây dựng một hệ thống mạng từ mạng nội bộ cho đến mạng diện rộng có kết nối toàn cầu; sự trao đổi thông tin, dữ liệu giữa các thành phần trên mạng; p
+hát triển ứng dụng mạng, ứng dụng Web, xử lý dữ liệu lớn
+và tính toán hiệu năng cao.
+- Chương trình nhằm đào tạo kỹ sư có kiến thức cơ sở lý thuyết, toán và khoa học được sử dụng trong ngành mạng máy tính và truyền thông dữ liệu. Sinh viên được trang bị các kiến thức cơ sở, chuyên sâu của ngành mạng máy tính và truyền thông dữ liệu, khả năng phân tích, thiết kế, đề xuất giải pháp, đáp ứng nhu cầu của một tổ chức hay cá nhân, p
+hát triển ứng dụng mạng,
+phần mềm trên thiết bị di động, phần mềm tự do nguồn mở, ứng dụng web, dịch vụ web, mô hình client-server, tính toán lưới, điện toán đám mây, dữ liệu lớn, giải thuật song song, phân tán và internet kết nối vạn vật.
+Sinh viên có khả năng giao tiếp bằng Anh ngữ thông thường và chuyên ngành.
+Vị trí việc làm
+- Kỹ sư quản trị mạng máy tính;
+- Chuyên viên tư vấn, phân tích, thiết kế, xây dựng, bảo trì các hệ thống mạng;
+- Lập trình viên tại các công ty phần mềm;
+- Giảng viên ở các trường đại học, cao đẳng.
+Nơi làm việc
+- Công ty, doanh nghiệp, tập đoàn tư nhân về lĩnh vực Công nghệ thông tin, Mạng máy tính và truyền thông dữ liệu;
+- Cơ quan, doanh nghiệp nhà nước;
+- Trường đại học, cao đẳng, trung cấp.
+→ Chuẩn đầu ra

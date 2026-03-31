@@ -1,0 +1,39 @@
+=== DỮ LIỆU TUYỂN SINH: 149_QL_THUY_SAN ===
+Ngày lấy: 2026-03-27 16:16:22
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bản không hỗ trợ HTML5 video.
+Thông tin chung
+- Tên
+ngành:
+Quản lý thủy sản
+- Thời
+gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+- Tên ngành
+“Quản lý thủy sản” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã ngành
+tuyển sinh:
+7620305
+- Các tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Hóa học, Sinh học (B00); Toán, Sinh học, Tiếng Anh (B08); Toán, Hóa học, Công nghệ nông nghiệp (X12).
+Giới thiệu
+- Ngành Quản lý thủy sản đào tạo kỹ sư có kiến thức về kỹ thuật phát triển nuôi trồng thủy sản; khai thác và quản lý nguồn lợi thủy sản; sản xuất, kinh doanh và dịch vụ thủy sản nhằm phát triển ngành thủy sản một cách hiệu quả và bền vững. Đặc biệt nhằm giúp cho người học khả năng tổ chức trang trại sản xuất, vận hành doanh nghiệp thủy sản một cách hiệu quả kinh tế.
+Ngoài kiến thức đại cương, người học được trang bị kiến thức ngành gồm: i) kiến thức cơ sở ngành về ngư nghiệp đại cương, đa dạng nguồn lợi thủy sản, kinh tế học và kinh tế tài nguyên, phương pháp nghiên cứu khoa học, phân tích chính sách, chuỗi cung ứng thủy sản và chuỗi giá trị thủy sản; ii) kiến thức chuyên ngành về quản lý và khai thác bền vững nguồn lợi thủy sản, phát triển nuôi trồng thủy sản, kinh tế sản xuất và thương hiệu sản phẩm thủy sản, quản trị doanh nghiệp thủy sản, marketing xuất nhập khẩu thủy sản, báo tình hình phát triển thủy sản.
+Vị trí việc làm
+Kỹ sư thủy sản tại các cơ quan quản lý ngành thủy sản;
+Chuyên viên/nghiên cứu viên/giảng viên ở các cơ sở đào tạo, nghiên cứu và qui hoạch phát triển thủy sản;
+Kỹ sư thủy sản phụ trách các doanh nghiệp/cơ sở sản xuất và cung cấp dịch vụ thủy sản;
+Chủ trang trại/hợp tác xã/giám đốc kinh doanh cho các cơ sở thủy sản;
+Chuyên viên quản lý thị trường chuỗi cung ứng các ngành hàng thủy sản;
+Nơi làm việc
+Các ban ngành trực thuộc các Sở Nông nghiệp và Phát triển nông thôn;
+Các cơ sở đào tạo, nghiên cứu và qui hoạch phát triển thủy sản;
+Các dự án phát triển thủy sản trong nước và quốc tế;
+Các doanh nghiệp/cơ sở sản xuất và cung cấp dịch vụ thủy sản;
+Các trang trại/hợp tác xã sản xuất và kinh doanh thủy sản;
+Các tổ chức hiệp hội thủy sản, tài nguyên môi trường biển, các khu bảo tồn thủy sản.
+→ Chuẩn đầu ra

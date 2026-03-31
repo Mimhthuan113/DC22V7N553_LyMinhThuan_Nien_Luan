@@ -1,0 +1,30 @@
+=== DỮ LIỆU TUYỂN SINH: 57_CNTT ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+- Tên ngành:
+ông nghệ thông tin
+- Thời gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+- Tên ngành “Công nghệ thông tin” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp
+Mã ngành tuyển sinh:
+7480201
+- Các tổ hợp xét tuyển:
+Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Tin học (X06); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu
+Chuyên ngành Công nghệ thông tin (CNTT) đào tạo kỹ sư có kỹ năng và kiến thức để đảm nhận vị trí nghề nghiệp trong lĩnh vực CNTT, thăng tiến đến vị trí lãnh đạo, khả hành nghiên cứu hoặc tiếp tục học cao hơn trong lĩnh vực này.
+Sinh viên ngành CNTT sẽ được trang bị những kiến thức nền tảng về cơ sở lý thuyết, toán và khoa học được sử dụng trong lĩnh vực CNTT, kiến thức chuyên sâu và các giải pháp về sản phẩm CNTT đương đại. Sau khi học xong chương trình, người học có khả năng giải thích và vận dụng kiến thức nền tảng, các giải pháp và sản phẩm CNTT thích hợp đáp ứng nhu cầu của một tổ chức hay cá nhân.
+Vị trí việc làm
+Nhà tư vấn, giám sát, nhà lãnh đạo lĩnh vực công nghệ thông tin cho các tổ chức, doanh nghiệp hay cá nhân.
+Lập trình viên, kỹ thuật viên, quản trị viên hệ thống công nghệ thông tin cho các tổ chức, doanh nghiệp hay cá nhân.
+Cán bộ nghiên cứu, phân tích trong lĩnh vực công nghệ thông tin tại các viện nghiên cứu hay các trường đại học.
+Giảng viên giảng dạy ở các trường đại học, cao đẳng, trung học chuyên nghiệp, trung học phổ thông.
+Nơi làm việc
+Các doanh nghiệp, công ty, tập đoàn có sử dụng CNTT.
+Các công ty, tập đoàn phát triển công nghệ và sản phẩm CNTT.
+Các trường đại học, cao đẳng, trung học chuyên nghiệp, trung học phổ thông.
+→ Chuẩn đầu ra

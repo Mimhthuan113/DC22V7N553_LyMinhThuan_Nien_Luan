@@ -1,0 +1,35 @@
+=== DỮ LIỆU TUYỂN SINH: 26_CNTT_CLC ===
+Ngày lấy: 2026-03-27 15:59:42
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+- Tên
+ngành
+Công nghệ thông tin (Chương trình chất lượng cao)
+- Thời gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+“Công nghệ thông tin (Chương trình chất lượng cao)” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã
+tuyển sinh:
+7480201C
+- Các
+tổ hợp
+xét tuyển:
++ Toán, Vật lí, Tiếng Anh (A01); Ngữ văn, Toán, Tiếng Anh (D01); Toán, Hóa học, Tiếng Anh (D07); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu
+Ngành Công nghệ thông tin (CNTT) chất lượng cao đào tạo
+đào tạo kỹ sư CNTT chất lượng cao, có kiến thức chuyên môn vững chắc, kỹ năng nghề nghiệp thành thạo, thái độ và tác phong làm việc chuyên nghiệp để đảm nhận những vị trí nghề nghiệp khác nhau trong lĩnh vực CNTT
+Kỹ sư chất lượng cao ngành CNTT được trông đợi có khả năng nắm vững kiến thức đại cương, cơ sở ngành, chuyên ngành và chuyên sâu nhằm vận dụng để triển khai các giải pháp và sản phẩm CNTT đương đại, cũng như khả năng thích ứng tốt với những thay đổi không ngừng của công nghệ; có kỹ năng làm việc chuyên nghiệp thích ứng với những vị trí nghề nghiệp hàng đầu trong lĩnh vực CNTT; có khả năng làm việc độc lập, tự học tập, tự nghiên cứu để có thể thích ứng với những thay đổi trong môi trường nghề nghiệp hoặc xã hội; thể hiện đạo đức nghề nghiệp, sự tự tin, lòng nhiệt tình, và sự đam mê trong nghề nghiệp.
+Vị trí việc làm
+Nhà tư vấn, giám sát, nhà lãnh đạo lĩnh vực công nghệ thông tin cho các tổ chức, doanh nghiệp hay cá nhân.
+Lập trình viên, kỹ thuật viên, quản trị viên hệ thống công nghệ thông tin cho các tổ chức, doanh nghiệp hay cá nhân.
+Cán bộ nghiên cứu, phân tích trong lĩnh vực công nghệ thông tin tại các viện nghiên cứu hay các trường đại học.
+Giảng viên giảng dạy ở các trường đại học, cao đẳng, trung học chuyên nghiệp, trung học phổ thông.
+Nơi làm việc
+Các doanh nghiệp, công ty, tập đoàn có sử dụng CNTT.
+Các công ty, tập đoàn phát triển công nghệ và sản phẩm CNTT.
+Các trường đại học, cao đẳng, trung học chuyên nghiệp, trung học phổ thông.
+→ Chuẩn đầu ra

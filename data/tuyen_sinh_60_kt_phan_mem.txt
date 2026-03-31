@@ -1,0 +1,36 @@
+=== DỮ LIỆU TUYỂN SINH: 60_KT_PHAN_MEM ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+ngành:
+Kỹ thuật phần mềm
+Thời gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+ngành “Kỹ thuật phần mềm” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7480103
+Các tổ hợp xét tuyển:
+Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Tin học (X06); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu ngành đào tạo
+- Ngành Kỹ thuật phần mềm (KTPM) đào tạo sinh viên trở thành kỹ sư KTMP chất lượng cao, có sức khỏe, đạo đức và trách nhiệm với xã hội, có kiến thức và kỹ năng chuyên môn để phát triển các hệ thống phần mềm; có thể đảm nhận vị trí nghề nghiệp trong lĩnh vực công nghệ phần mềm; có khả năng học tập suốt đời và khả năng làm việc trong lĩnh vực phần mềm trong và ngoài nước.
+- Sinh viên được học kiến thức và kỹ năng chung dành cho người kỹ sư công nghệ thông tin; kiến thức chuyên sâu về phân tích, thiết kế, cài đặt, kiểm thử, đảm bảo chất lượng, bảo trì phần mềm và quản lý dự án phần mềm; kiến thức nền tảng để phát triển hoàn chỉnh các hệ thống phần mềm theo một trong ba hướng: phần mềm nhúng và IoT, phần mềm nghiệp vụ, hoặc phần mềm mô phỏng.
+Vị trí việc làm
+Kỹ sư phát triển phần mềm
+Kỹ sư kiểm thử phần mềm
+Kỹ sư phân tích và thiết kế phần mềm
+Kỹ sư bảo trì phần mềm
+Trưởng nhóm lập trình, trưởng dự án và các vị trí điều hành các cấp trong dự án phần mềm
+Chủ doanh nghiệp sản xuất phần mềm;
+Cán bộ nghiên cứu và ứng dụng Công nghệ thông tin
+Giảng viên các trường đại học, cao đẳng, trung cấp đào tạo về Công nghệ thông tin.
+Nơi làm việc
+Công ty chuyên về thiết kế, phát triển phần mềm,
+Công ty tư vấn, thiết kế giải pháp công nghệ thông tin cho doanh nghiệp,
+Các cơ quan, đơn vị nhà nước có liên quan đến vận hành và phát triển ứng dụng CNTT.
+Các viện nghiên cứu và chuyển giao công nghệ thuộc lĩnh vực CNTT
+Trường đại học, cao đẳng, trung học phổ thông, trung học chuyên nghiệp và dạy nghề.
+→ Chuẩn đầu ra

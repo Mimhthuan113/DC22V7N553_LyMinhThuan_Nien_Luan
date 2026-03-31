@@ -1,0 +1,39 @@
+=== DỮ LIỆU TUYỂN SINH: 84_VAN_HOC ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+Tên ngành:
+Văn học
+Thời gian đào tạo:
+4 năm
+; Danh hiệu cấp bằng:
+Cử nhân
+Tên ngành “Văn học” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7229030
+Các tổ hợp xét tuyển:
+Ngữ văn, Lịch sử, Địa lí (C00); Ngữ văn, Toán, Tiếng Anh (D01); Ngữ văn, Lịch sử, Tiếng Anh (D14); Ngữ văn, Địa lí, Tiếng Anh (D15).
+Giới thiệu ngành đào tạo
+- Ngành Văn học đào tạo cử nhân có kiến thức chuyên môn về văn học và ngôn ngữ phục vụ lĩnh vực nghiên cứu và giảng dạy ngữ văn hay báo chí, xuất bản, văn phòng.
+- Sinh viên được học kiến thức nền tảng: về nguyên lý, tác phẩm văn học và tiến trình văn học, biên tập tác phẩm văn chương, về vận dụng chữ Hán và chữ Nôm, về ngữ âm, từ vựng, cú pháp tiếng Việt để khảo sát tác phẩm văn học, về làm văn, ngôn ngữ báo chí, biên tập báo chí, kỹ thuật nhiếp ảnh, quay video phục vụ nhu cầu sinh viên có định hướng nghề nghiệp báo chí...; kiến thức chuyên sâu: về bộ phận văn học dân gian và văn học viết Việt Nam, về một số nền văn học lớn, tiêu biểu thuộc văn học châu Âu, châu Á, châu Mỹ, về văn học đặc thù vùng miền...
+Vị trí việc làm
+- Nhân viên tại các công ty truyền thông
+- Nhân viên hành chính, quản trị văn phòng, quản lý hệ thống văn bản.
+- Nhân viên phụ trách công tác biên tập, xuất bản, sáng tác, phê bình văn học nghệ thuật.
+- Phóng viên, biên tập viên, biên tập website, viết kịch bản truyền hình, người dẫn chương trình, làm quảng cáo.
+- Nhân viên phụ trách công tác quản lý giáo dục.
+- Giảng viên các trường đại học, cao đẳng.
+- Chuyên viên các viện, trung tâm nghiên cứu khoa học xã hội.
+- Ngoài ra, sinh viên có cơ hội học tiếp các bậc Thạc sĩ, Tiến sĩ ở các chuyên ngành phù hợp như: Văn học Việt Nam, Văn học nước ngoài, Lý luận văn học, Ngôn ngữ, Văn hóa học, Báo chí và truyền thông…
+Nơi làm việc
+- Công ty truyền thông, tổ chức sự kiện.
+- Sở văn hóa và thông tin, phòng văn hóa, bảo tàng.
+- Thư viện, trung tâm lưu trữ thông tin, dữ liệu.
+- Cơ quan báo chí và truyền thông, nhà xuất bản.
+- Cơ quan văn hóa, chính trị, kinh tế, tổ chức và đoàn thể xã hội có nhu cầu.
+- Sở / Phòng Giáo dục và Đào tạo.
+- Trường đại học, cao đẳng.
+- Viện, trung tâm nghiên cứu khoa học xã hội.
+→ Chuẩn đầu ra

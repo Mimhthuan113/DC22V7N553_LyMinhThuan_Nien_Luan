@@ -1,0 +1,28 @@
+=== DỮ LIỆU TUYỂN SINH: 136_SP_HOA_HOC ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+Tên ngành:
+Sư phạm Hóa học
+Thời gian đào tạo:
+4 năm
+; Danh hiệu cấp bằng:
+Cử nhân
+Tên ngành “Sư phạm Hóa học” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7140212
+Các tổ hợp xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Hóa học, Sinh học (B00); Toán, Hóa học, Tiếng Anh (D07); Toán, Hóa học, Tin học (X10).
+Giới thiệu
+- Ngành Sư phạm Hóa học đào tạo những cử nhân khoa học có chuẩn mực đạo đức, tác phong tốt, kiến thức chuyên môn về Hóa học vững vàng để trở thành các giáo viên dạy môn Hóa học ở các cơ sở giáo dục (trung học cơ sở, trung học phổ thông, …); đáp ứng yêu cầu phát triển giáo dục phổ thông vế quy mô, chất lượng, hiệu quả, phục vụ sự nghiệp công nghiệp hóa, hiện đại hóa Đất nước.
+- Sinh viên được học những kiến thức và kỹ năng chung của một cử nhân sư phạm như tâm lý, giáo dục và phương pháp dạy học…; những kiến thức lý thuyết và thực hành của chuyên ngành Hóa học như Hóa đại cương, Hóa Vô cơ, Hóa Hữu cơ, Hóa Phân tích… nhằm trang bị cho sinh viên kiến thức chuyên môn, năng lực nghề nghiệp và năng lực chuyên môn theo yêu cầu đổi mới giáo dục phổ thông.
+Vị trí việc làm
+- Giáo viên, giảng viên tại các các trường trung học cơ sở, trung học phổ thông, các trường trung học chuyên nghiệp và dạy nghề, các trường cao đẳng và đại học.
+- Nghiên cứu viên tại các trung tâm, các viện nghiên cứu giáo dục.
+- Chuyên viên và cán bộ quản lý ở các trường học, các phòng giáo dục, các sở giáo dục.
+Nơi làm việc
+- Trường trung học cơ sở, trung học phổ thông, trung tâm giáo dục thường xuyên, các trường Trung Cấp, Cao Đẳng, Đại học ở các Quận, Huyện, Thành phố.
+- Các trung tâm phân tích, kiểm định chất lượng sản phẩm như: lương thực, thủy sản, nông sản.
+→ Chuẩn đầu ra

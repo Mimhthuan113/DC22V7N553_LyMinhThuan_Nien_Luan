@@ -1,0 +1,45 @@
+=== DỮ LIỆU TUYỂN SINH: 63_KH_MAY_TINH ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+ngành:
+Khoa học máy tính
+Thời
+gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+Tên ngành “Khoa học máy tính” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+ngành tuyển sinh:
+7480101
+Các tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Tin học (X06); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu ngành đào tạo
+Khoa học Máy tính là một trong những ngành học quan trọng tại các trường đại học đào tạo về công nghệ thông tin (CNTT) nói riêng và kỹ thuật nói chung. Đây là ngành học dành cho các bạn đam mê nghiên cứu chuyên sâu về CNTT, khả năng tính toán của hệ thống máy tính, trí thông minh nhân tạo, học máy, đồ hoạ và thị giác máy tính,… rất phù hợp các nhu cầu về nguồn nhân lực cho cuộc cách mạng công nghệ 4.0.
+Chương trình nhằm đào tạo kỹ sư có
+kiến thức cốt lõi ngành Khoa học máy tính
+: kiến trúc máy tính, hệ điều hành, ngôn ngữ lập trình phần mềm và phần cứn
+và các kiến thức chuyên sâu về:
+trí tuệ nhân tạo
+học máy, máy học ứng dụng, khai thác dữ liệu, học sâu, hệ thống hỏi đáp; đồ hoạ, lập trình trò chơi, xử lý ảnh, thị giác máy tính.
+Sinh viên
+sau khi ra trường
+có khả năng tư duy phát triển từ lý thuyết đến việc xây dựng hệ thống thông minh, có khả năng ứng dụng các kết quả nghiên cứu vào thực tiễn cũng như
+đủ kiến thức và kỹ năng cần thiết để thích ứng với sự thay đổi của công nghệ mới
+trong lĩnh vực khoa học máy tính và CNTT.
+Vị trí việc làm
+- Chuyên viên phân tích dữ liệu;
+- Chuyên viên đồ hoạ và thị giác máy tính
+- Lập trình viên, quản lý dự án;
+- Chuyên viên thiết kế, phát triển phần mềm;
+- Chuyên viên nghiên cứu và phát triển các công nghệ tri thức (sản phẩm mang tính thông minh), xử lý hình ảnh, thị giác máy tính, thực tế ảo, lập trình trò chơi.
+- Giảng viên, nghiên cứu viên
+Nơi làm việc
+- Công ty sản xuất, gia công, bảo trì phần mềm;
+- Công ty tư vấn - thiết kế các giải pháp công nghệ thông tin;
+- Cơ quan Nhà nước có liên quan đến lĩnh vực công nghệ thông tin;
+- Trường đại học, cao đẳng, trung cấp, … đào tạo về công nghệ thông tin.
+→ Chuẩn đầu ra

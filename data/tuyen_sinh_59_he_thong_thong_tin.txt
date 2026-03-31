@@ -1,0 +1,46 @@
+=== DỮ LIỆU TUYỂN SINH: 59_HE_THONG_THONG_TIN ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+ngành:
+Hệ thống thông tin
+Thời
+gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+- Tên
+ngành “Hệ thống thông tin” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+- Mã
+ngành
+tuyển sinh:
+7480104
+- Các tổ hợp
+xét tuyển:
++ Toán, Vật lí, Hóa học (A00); Toán, Vật lí, Tiếng Anh (A01); Toán, Vật lí, Tin học (X06); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu
+Ngành Hệ thống thông tin (HTTT) đào tạo kỹ sư có khả năng phân tích, thiết kế, xây dựng và quản trị các HTTT (phần mềm phục vụ quản lý, điều hành, hỗ trợ ra quyết định) cho các tổ chức hoạt động trong các lĩnh vực khác nhau như thương mại, giáo dục, hành chính sự nghiệp.
+Sinh viên được học kiến thức và rèn luyện kỹ năng nghề nghiệp chung dành cho người làm việc trong lĩnh vực CNTT nói chung và ngành HTTT nói riêng (ví dụ, các giải pháp CNTT phục vụ chuyển đổi số trong quản lý; nền tảng CNTT; đảm bảo an toàn HTTT, mạng máy tính; lập trình ứng dụng, thiết kế hệ thống Web); kiến thức và kỹ năng chuyên sâu về quy trình, kỹ thuật xây dựng và phát triển HTTT quản lý, HTTT thông minh (phân tích dữ liệu và hành vi người dùng, tích hợp trí tuệ nhân tạo vào HTTT), cách thức sử dụng, quản trị các hệ quản trị CSDL, kỹ năng về tích hợp hệ thống.
+Vị trí việc làm
+Chuyên
+viên tư vấn, thiết kế giải pháp xây dựng HTTT cho đơn vị, tổ chức.
+Quản
+viên HTTT tại các đơn vị, tổ chức.
+trình
+viên, quản lý dự án phần mềm
+viên thiết kế, quản trị cơ sở dữ liệu.
+Chuyên gia phân tích, thiết kế HTTT
+trách
+các công ty mua bán thiết bị tin học, các công ty gia công phần mềm.
+Giảng
+viên
+các trường đại học, cao đẳng, trung cấp đào tạo về CNTT. Giáo viên các trường THPT, THCS.
+Nơi làm việc
+Các công ty tư vấn, thiết kế giải pháp CNTT.
+Các đơn vị, tổ chức có ứng dụng CNTT trong quản lý và điều hành.
+Các công ty phần mềm.
+Các công ty mua bán thiết bị, dịch vụ liên quan đến CNTT
+Các trường đại học, cao đẳng, trung cấp, THPT, THCS
+→ Chuẩn đầu ra

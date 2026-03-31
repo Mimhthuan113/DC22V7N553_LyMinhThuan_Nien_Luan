@@ -1,0 +1,32 @@
+=== DỮ LIỆU TUYỂN SINH: 132_SP_LICH_SU ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Trình duyệt của bạn không hỗ trợ HTML5 video.
+Thông tin chung
+Tên ngành:
+Sư phạm Lịch sử
+Thời gian đào tạo:
+4 năm
+; Danh hiệu cấp bằng:
+Cử nhân
+- Tên ngành “Sư phạm Lịch sử” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp
+Mã ngành tuyển sinh:
+7140218
+Các tổ hợp xét tuyển:
+Ngữ văn, Lịch sử, Địa lí (C00); Ngữ văn, Lịch sử, Giáo dục công dân (C19); Ngữ văn, Lịch sử, Tiếng Anh (D14); Ngữ văn, Toán, Lịch sử (C03); Ngữ văn, Lịch sử, Giáo dục KT&PL (X70).
+Giới thiệu
+- Ngành Sư phạm Lịch sử đào tạo sinh viên trở thành người giáo viên có kiến thức sâu rộng về khoa học lịch sử, khoa học giáo dục, có năng lực sư phạm, năng lực nghiên cứu đáp ứng được yêu cầu của chuẩn nghề nghiệp, tham gia vào sự nghiệp đổi mới giáo dục và đào tạo hiện nay ở nước ta; đồng thời có thể tiếp tục học lên bậc cao hơn và tự học để hoàn thiện và nâng cao trình độ và năng lực làm việc.
+- Chương trình đào tạo ngành Sư phạm lịch sử bao gồm khối kiến thức lí thuyết và thực hành. Tốt nghiệp ngành Sư phạm lịch sử, sinh viên có khả năng tổng hợp và phân tích các vấn đề lịch sử, ứng dụng vào trong giảng dạy lịch sử ở trường phổ thông, giảng dạy môn lịch sử Đảng Cộng sản Việt Nam ở các trường cao đẳng và đại học cũng như trở thành chuyên viên nghiên cứu lịch sử ở các viện, trung tâm, bảo tàng, ban tuyên giáo.
+Vị trí việc làm
+- Giáo viên Lịch sử ở trường phổ thông: Trung học phổ thông và Trung học cơ sở.
+- Chuyên viên môn Lịch sử ở các Sở, phòng Giáo dục và Đào tạo (Sở GD&ĐT).
+- Cán bộ quản lý giáo dục ở các trường phổ thông, các Sở, Phòng GD&ĐT.
+- Cán bộ quản lý, chuyên viên nghiên cứu lịch sử tại các trung tâm, viện nghiên cứu, bảo tàng, Ban tuyên giáo các cấp.
+- Giảng viên, chuyên viên, nghiên cứu viên tại các trường đại học, cao đẳng, trung cấp đào tạo và nghiên cứu về Lịch sử Việt Nam, lịch sử thế giới và lịch sử Đảng Cộng sản Việt Nam
+Nơi làm việc
+- Các trường THPT, THCS.
+- Các Sở, Phòng GD&ĐT.
+- Các trường đại học, cao đẳng, trung cấp.
+- Các trung tâm, viện nghiên cứu, Ban Tuyên giáo.
+→ Chuẩn đầu ra

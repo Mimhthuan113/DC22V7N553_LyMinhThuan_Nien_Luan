@@ -1,0 +1,32 @@
+=== DỮ LIỆU TUYỂN SINH: 37_HTTT_CLC ===
+Ngày lấy: 2026-03-27 16:14:00
+Nguồn: https://tuyensinh.ctu.edu.vn
+
+Thông tin chung
+Tên ngành:
+Hệ thống thông tin (Chương trình chất lượng cao)
+Thời gian đào tạo:
+4,5 năm
+; Danh hiệu cấp bằng:
+Kỹ sư
+Tên ngành “Hệ thống thông tin (Chương trình chất lượng cao)” được ghi trên bằng tốt nghiệp, bảng điểm và quyết định tốt nghiệp.
+Mã ngành tuyển sinh:
+7480104C
+Các tổ hợp xét tuyển:
+Toán, Vật lí, Tiếng Anh (A01); Ngữ văn, Toán, Tiếng Anh (D01); Toán, Hóa học, Tiếng Anh (D07); Toán, Tin học, Tiếng Anh (X26).
+Giới thiệu
+Ngành Hệ thống thông tin (HTTT) đào tạo các kỹ sư có khả năng phân tích, thiết kế, xây dựng, vận hành và triển khai các loại HTTT (còn được gọi là các phần mềm, ví dụ như các hệ thống thương mại điện tử, hệ thống quản lý nhân sự,...)
+Chương trình đào tạo chất lượng cao (CTĐT-CLC) ngành HTTT đào tạo những kỹ sư trình độ cao để giải quyết những vấn đề về HTTT thông minh và HTTT quản lý. Sinh viên được trang bị các kiến thức quan trọng như phân tích thiết kế HTTT, khai thác và quản trị các loại cơ sở dữ liệu, phân tích dữ liệu, ứng dụng trí tuệ nhân tạo và máy học để xây dựng các HTTT thông minh, các hệ thống hỗ trợ ra quyết định.
+CTĐT-CLC được thiết kế dựa trên (và ngang bằng) với CTĐT của các nước tiên tiến; Sinh viên sẽ được đào tạo trong môi trường học tập, thực hành và nghiên cứu với những điều kiện tốt nhất. Tất cả sinh viên được tham gia nghiên cứu khoa học; Được giảng dạy bởi đội ngũ giảng viên trong và ngoài nước có nhiều kinh nghiệm, trình độ từ Tiến sĩ trở lên; Có cơ hội được trao đổi học tập ở nước ngoài; Phối hợp chặt chẽ giữa nhà trường với các doanh nghiệp, đối tác trong và ngoài nước; Trên 60% học phần được giảng dạy/tài liệu bằng tiếng Anh, sinh viên có lợi thế để làm việc ở các công ty nước ngoài. Đặc biệt, học xong chương trình này, sinh viên sẽ được chuyển đổi (miễn) tối đa 30 tín chỉ khi học tiếp lên bậc thạc sĩ HTTT.
+Vị trí việc làm
+- Lập trình viên trong các công ty, tập đoàn sản xuất, gia công phần mềm.
+- Chuyên viên tư vấn, thiết kế giải pháp, xây dựng và phát triển HTTT quản lý, HTTT thông minh.
+- Chuyên viên phân tích và thiết kế hệ thống, quản trị cơ sở dữ liệu, phân tích dữ liệu
+- Chuyên viên quản trị các loại HTTT
+- Cán bộ quản lý dự án phần mềm, giám đốc thông tin (CIO).
+- Giảng viên/giáo viên lĩnh vực Máy tính và CNTT
+Nơi làm việc
+- Các công ty, doanh nghiệp, tập đoàn phần mềm.
+- Các cơ quan, đơn vị có liên quan đến vận hành và phát triển ứng dụng CNTT.
+- Các trung tâm công nghệ, ứng dụng thuộc lĩnh vực CNTT.
+- Các viện nghiên cứu, các trường đại học, cao đẳng, trung học phổ thông, trung học chuyên nghiệp và dạy nghề.
