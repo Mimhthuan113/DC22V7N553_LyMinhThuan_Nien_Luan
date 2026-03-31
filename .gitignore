@@ -1,0 +1,53 @@
+# Cấu hình môi trường (Giấu API Key)
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.venv/
+env/
+
+# Data thô & Logs (Tuỳ chọn: nếu muốn giữ data thì xoá các dòng dưới)
+# data/*.txt (Mình vẫn đẩy lên để github có data cho giám khảo chấm nhé)
+test_results.json
+*.log
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Flutter
+.dart_tool/
+build/
+.packages
+.pub-cache/
+.pub/
+
+# Giữ lại ở máy cá nhân (KHÔNG PUSH LÊN GITHUB)
+MauLuanVan-NienLuan.docx
+mau_luan_van_text.txt
+CHUC_NANG_FILE.md
+thesis_text.txt
+test_15_questions.py
+
+# Giữ lại các định dạng tương tự
+*.md
+!README.md
+*.txt
+!requirements.txt
+!data/*.txt
+!data/*.json
+test_*.py
+mau_luan_van/
+flutter_chatbot_app/windows/
+flutter_chatbot_app/linux/
+flutter_chatbot_app/macos/
+flutter_chatbot_app/web/
