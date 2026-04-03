@@ -25,14 +25,15 @@
 
 ## ✨ Tính năng nổi bật
 
-| Tính năng | Mô tả |
-|-----------|-------|
-| 🔍 **Tra cứu thông minh (RAG)** | Tìm đúng thông tin ngành, tổ hợp, chỉ tiêu, học phí từ kho dữ liệu |
-| 🤖 **AI Tổng hợp (Gemini)** | Câu trả lời tự nhiên, thân thiện, phù hợp xem trên di động |
-| 🔄 **Xoay vòng API Key** | Tự động chuyển key khi gặp giới hạn quota, đảm bảo hoạt động liên tục |
-| 📱 **Đa nền tảng** | Ứng dụng Flutter chạy trên Web, Android, iOS |
-| 📊 **Ghi log Google Sheets** | Lịch sử hỏi đáp được lưu tự động để cải thiện dữ liệu |
-| ⚡ **Cache thông minh** | Câu hỏi lặp lại được trả lời ngay lập tức, không tốn quota AI |
+| Tính năng                       | Mô tả                                                                                 |
+| ------------------------------- | ------------------------------------------------------------------------------------- |
+| 🔍 **Tra cứu thông minh (RAG)** | Tìm đúng thông tin ngành, tổ hợp, chỉ tiêu, học phí và Ký túc xá (KTX) từ kho dữ liệu |
+| 🛡️ **Kiểm duyệt tự động**       | Phân loại mượt mà câu hỏi tuyển sinh vs spam; ép AI trả lời bám sát dữ liệu thật      |
+| 🤖 **AI Tổng hợp (Gemini)**     | Câu trả lời tự nhiên, thân thiện, kết hợp gọi ý video ngành trực quan                 |
+| 🔄 **Xoay vòng API Key**        | Tự động chuyển key khi gặp giới hạn quota, đảm bảo hoạt động liên tục                 |
+| 📱 **Đa nền tảng**              | Ứng dụng Flutter chạy trên Web, Android, iOS                                          |
+| 📊 **Ghi log Google Sheets**    | Lịch sử hỏi đáp được lưu tự động để cải thiện dữ liệu                                 |
+| ⚡ **Cache thông minh**         | Câu hỏi lặp lại được trả lời ngay lập tức, không tốn quota AI                         |
 
 ---
 
@@ -87,17 +88,20 @@ DC22V7N553_LyMinhThuan_Nien_Luan/
 > **Yêu cầu:** Đã cài [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 **Bước 1:** Sao chép file cấu hình và điền API Key của bạn
+
 ```bash
 copy .env.example .env
 # Sau đó mở file .env và thay YOUR_KEY vào GEMINI_API_KEY
 ```
 
 **Bước 2:** Khởi động toàn bộ hệ thống
+
 ```bash
 docker-compose up --build -d
 ```
 
 **Bước 3:** Truy cập ứng dụng
+
 - 🌐 **Giao diện Chatbot:** http://localhost:80
 - ⚙️ **API Docs (Swagger):** http://localhost:8000/docs
 - ❤️ **Kiểm tra sức khỏe:** http://localhost:8000/health
@@ -109,6 +113,7 @@ docker-compose up --build -d
 > **Yêu cầu:** Python 3.11+, Flutter SDK
 
 #### Bước 1: Cài đặt thư viện Python
+
 ```bash
 # Tạo môi trường ảo (khuyến nghị)
 python -m venv venv
@@ -119,23 +124,27 @@ pip install -r requirements.txt
 ```
 
 #### Bước 2: Cấu hình biến môi trường
+
 ```bash
 copy .env.example .env
 # Mở file .env và điền GEMINI_API_KEY của bạn vào
 ```
 
 #### Bước 3: Cập nhật dữ liệu tuyển sinh (tuỳ chọn)
+
 ```bash
 # Chạy scraper để lấy dữ liệu mới nhất từ tuyensinh.ctu.edu.vn
 python scraper.py
 ```
 
 #### Bước 4: Khởi động Backend
+
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 #### Bước 5: Chạy Frontend (Flutter Web)
+
 ```bash
 cd flutter_chatbot_app
 flutter pub get
@@ -174,6 +183,7 @@ GOOGLE_SHEET_API_URL=https://script.google.com/macros/s/.../exec
 Sau khi chạy server, bạn có thể kiểm thử qua:
 
 **PowerShell:**
+
 ```powershell
 # Test kiểm tra server
 Invoke-RestMethod -Uri "http://localhost:8000/health" -Method GET
@@ -206,13 +216,14 @@ docker-compose restart backend
 
 ## 📊 API Reference
 
-| Method | Endpoint | Mô tả |
-|--------|----------|-------|
-| `GET` | `/health` | Kiểm tra trạng thái server |
-| `GET` | `/chat?question=...` | Gửi câu hỏi và nhận trả lời |
-| `POST` | `/chat` | Gửi câu hỏi (kèm email/phone để log) |
+| Method | Endpoint             | Mô tả                                |
+| ------ | -------------------- | ------------------------------------ |
+| `GET`  | `/health`            | Kiểm tra trạng thái server           |
+| `GET`  | `/chat?question=...` | Gửi câu hỏi và nhận trả lời          |
+| `POST` | `/chat`              | Gửi câu hỏi (kèm email/phone để log) |
 
 **Request Body (POST /chat):**
+
 ```json
 {
   "question": "Ngành Công nghệ thông tin có học phí bao nhiêu?",

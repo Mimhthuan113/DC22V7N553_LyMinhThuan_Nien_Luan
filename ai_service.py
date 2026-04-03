@@ -1,6 +1,8 @@
 import asyncio
 import random
 import time
+import unicodedata
+import httpx
 from datetime import datetime
 from typing import List, Tuple
 
@@ -35,6 +37,8 @@ ANSWER_CACHE = {}
 KEY_COOLDOWN_UNTIL = {}
 _KEY_ROTATION_INDEX = 0
 _KEY_ROTATION_LOCK = asyncio.Lock()
+SESSION_MAJOR_MEMORY = {}
+SESSION_CHAT_HISTORY = {}
 
 # Chuẩn hóa câu trả lời lại 
 def _cache_key(question: str) -> str:
@@ -100,13 +104,16 @@ def _backoff_with_jitter(attempt: int, base_delay: float = 0.8, cap: float = 8.0
     return exp_delay + jitter#tra ve delay
 
 
-async def call_gemini(question: str, context: List[str]) -> str: #ham goi gemini
+async def call_gemini(question: str, context: List[str], chat_history: List[dict] = None) -> Tuple[str, str, str]: #ham goi gemini
+    if chat_history is None:
+        chat_history = []
+    
     keys_to_try = await _next_available_keys() #lay danh sach key kha dung
     if not keys_to_try:
         raise HTTPException(status_code=429, detail="No available Gemini API key") #tra ve ko co key nao kha dung o 429
 
-    context_text = "\n".join(context[:3])[:1350] if context else "Không có dữ liệu tuyển sinh."#chi lay 3 phan tu noi lai thanh chuoi cat toi da 1350 tranh promt qua dai tiet kiem token neu rong thi tra ve ko co du lieu
-    prompt = f"{PROMPT}\n\nDữ liệu:\n{context_text}\n\nCâu hỏi: {question}" #tao prompt gom prompt chinh du lieu va cau hoi
+    context_text = "\n\n".join(context[:8]) if context else "Không có dữ liệu tuyển sinh."
+    prompt = PROMPT.format(context_text=context_text, question=question)
 
     # Ưu tiên model chính, sau đó fallback; loại trùng để không gọi lặp vô ích.
     models_to_try = [] #tao danh sach model
@@ -120,39 +127,42 @@ async def call_gemini(question: str, context: List[str]) -> str: #ham goi gemini
     #AsyncClient : cho phep goi api ko dong bo 
     async with httpx.AsyncClient(timeout=30) as client: #tao client de goi api dung httpx goi api  neu qua 30s tra ve ngheo
         # Xoay vòng theo key trước, trong mỗi key mới fallback theo model.
-        for api_key in keys_to_try: #duyet qua danh sach key kha dung neu key1 bi loi lay key 2 cho toi het rui xoay vong lai
-            key_hit_quota = False #kiem tra xem key co bi quota khong neu true thi bo key nay ko thi lay 
+        for api_key in keys_to_try: #duyet qua danh sach key kha dung
+            model_quota_count = 0 # đếm số model bị quota trên key này
             # Thuật toán fallback theo model: mỗi model được retry vài lần trước khi đổi model khác.
             for model_name in models_to_try:#duyet qua danh sach model
                 for attempt in range(1, max_attempts_per_model + 1): #duyet qua danh sach model tuc la thu qua 3 lan ko dc qua khác ko dc qua  khac 
+                    payload_contents = chat_history + [{"role": "user", "parts": [{"text": prompt}]}]
                     r = await client.post( #goi api gemini
                         f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent",#Truyền api_key qua query param
                         params={"key": api_key}, #tham so truyen vao api gemini
                         json={
-                            "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                            "generationConfig": {"temperature": 0.15, "maxOutputTokens": 400},#nhiep do thap de tra loi chinh xac và gioi han cau tra loi la 400
+                            "contents": payload_contents,
+                            "generationConfig": {"temperature": 0.15, "maxOutputTokens": 1024},#nhiep do thap de tra loi chinh xac và gioi han cau tra loi la 1024
                         },
                     )
                     if r.status_code == 200: #neu api tra ve thanh cong
                         data = r.json() #lay du lieu tu api
                         try: #bat loi khi parse du lieu
-                            return "".join(
+                            answer_text = "".join(
                                 p.get("text", "") #lay text tu api
                                 for p in data["candidates"][0]["content"].get("parts", []) #lay parts tu api /parts: content chunks
                                 if isinstance(p, dict) #kiem tra xem p co phai la dict khong
                             )
+                            return answer_text, model_name, api_key[-4:]
                         except Exception: #neu parse du lieu loi
                             raise HTTPException(status_code=502, detail="Parse error")#tra ve loi parse
-
+                    elif r.status_code == 429:
+                        model_quota_count += 1
+                        saw_quota_error = True
+                        
                     error_msg = r.text #lay thong bao loi
                     last_error = f"{model_name}#attempt{attempt}: {error_msg}"#luu thong bao loi o model nao thu tu nao
-                    print(f"[gemini] model={model_name} attempt={attempt} status={r.status_code}")# in thong bao loi
 
                     if r.status_code == 429 or "quota" in error_msg.lower():#neu api tra ve loi quota bat 2 truong hop loi 429 hoac quota
                         saw_quota_error = True #kiem tra xem co loi quota khong
-                        key_hit_quota = True #kiem tra xem key co bi quota khong
-                        _mark_key_cooldown(api_key) #danh dau key bi loi
-                        break #thoat khoi vong lap
+                        model_quota_count += 1
+                        break #thoat khoi vong lap attempt, chuyển sang model kế tiếp
 
                     if r.status_code in (400, 404) and any(
                         k in error_msg.lower() for k in ["model", "not found", "unsupported"]
@@ -166,9 +176,13 @@ async def call_gemini(question: str, context: List[str]) -> str: #ham goi gemini
                         continue #tiep tuc vong lap
 
                     break #thoat khoi vong lap
-
-                if key_hit_quota:#neu key bi quota
-                    break #thoat khoi vong lap
+                
+                # Nếu request thành công và trả về đáp án, nó đã return ngay ở trên rồi.
+                # Nếu chạy xuống đây nghĩa là model này xịt, nó sẽ vòng lên for model_name tiếp theo.
+            
+            # Nếu thử hết tất cả các model mà model nào cũng bị quota -> account này thật sự cạn quota.
+            if model_quota_count >= len(models_to_try):
+                _mark_key_cooldown(api_key)
 
     if saw_quota_error:#neu co loi quota
         raise HTTPException(status_code=429, detail="Quota")#tra ve loi quota
@@ -201,11 +215,23 @@ def _rich_fallback(question: str, context: List[str], prefix: str) -> str:#ham l
     major_info = catalog_major(question)#doanh nganh tu cau hoi user trar ve danh sach nganh
     if major_info:#neu co nganh
         bullets = "\n".join(f"- {ln}" for ln in major_info)#tao danh sach nganh them dau - vao moi dong va xuong dong
-        return (#tra ve cau tra loi
-            f"{prefix}\n"#tra ve prefix
-            f"Thông tin ngành này trong danh mục:\n{bullets}\n"#tra ve danh sach nganh
-            f"Bạn có thể hỏi thêm về tổ hợp, chỉ tiêu hoặc học phí của ngành này để mình tư vấn rõ hơn.\n"#tra ve loi khuyen
-            f"Nguồn: {OFFICIAL_SOURCE_URL}"#tra ve nguon
+        
+        # Detect what user asked to avoid redundant suggestions
+        q_fold = _fold(question)
+        suggestions = []
+        if "to hop" not in q_fold: suggestions.append("tổ hợp")
+        if "chi tieu" not in q_fold: suggestions.append("chỉ tiêu")
+        if "hoc phi" not in q_fold: suggestions.append("học phí")
+        
+        suggest_text = ""
+        if suggestions:
+            suggest_text = f"Bạn có thể hỏi thêm về {', '.join(suggestions)} của ngành này để mình tư vấn rõ hơn.\n"
+
+        return (
+            f"{prefix}\n"
+            f"Thông tin ngành này trong danh mục:\n{bullets}\n"
+            f"{suggest_text}"
+            f"Nguồn: {OFFICIAL_SOURCE_URL}"
         )
     
     # Nếu là lỗi quota/hệ thống, mới lấy snippet để 'chữa cháy'
@@ -241,12 +267,26 @@ def _expand_if_too_short(answer: str, question: str, context: List[str]) -> str:
     )
 
 #dạng câu tra loi 
-async def process_chat(question: str, email: str = "", phone: str = "", top_k: int = 5) -> Tuple[str, List[str]]:#hàm bất đồng bộ (async) → thường dùng khi gọi API, DB, AI model…  tra ve cau tra loi va nguon 
+async def process_chat(question: str, email: str = "", phone: str = "", top_k: int = 8, session_id: str = "") -> Tuple[str, List[str]]:
+    raw_question = question
+    # Xử lý nhớ ngành học từ câu hỏi trước nếu câu này không nhắc đến
+    detected = catalog_major(question)
+    if not detected and session_id and session_id in SESSION_MAJOR_MEMORY:
+        last_major = SESSION_MAJOR_MEMORY[session_id]
+        question = f"Ngành {last_major} - " + question
+
+    # Nếu câu hỏi hiện tại có ngành, lưu lại để ván sau còn nhớ
+    if detected and session_id:
+        major_line = detected[0]
+        parts = major_line.split("|")
+        major_name = parts[2].strip() if len(parts) >= 3 else (major_line.split("-")[0].strip() if "-" in major_line else major_line.strip())
+        SESSION_MAJOR_MEMORY[session_id] = major_name
+
     # Retrieval: lấy top-k ngữ cảnh phù hợp nhất từ kho TXT.
     context = find_context(question, top_k)#lay top-k ngu canh phu hop nhat tu kho TXT
     sources = source_names(context, 3)#lay ten nguon tu context
 
-    qf = _fold(question)#chuan hoa cau hoi
+    qf = _fold(question)
     if "to hop" in qf and "xet tuyen" in qf:#kiem tra cau hoi co chua "to hop" va "xet tuyen"
         combo_line = extract_combinations_from_context(context)#lay to hop xet tuyen tu context
         if combo_line:#neu co to hop xet tuyen
@@ -277,11 +317,23 @@ async def process_chat(question: str, email: str = "", phone: str = "", top_k: i
                 "Hệ thống AI đang tạm giới hạn quota, mình trả lời bằng dữ liệu cục bộ trong lúc chờ mở lại.",#tra ve loi khuyen
             )
         else:
-            answer = await call_gemini(question, context)#goi gemini de tra loi cau hoi
-            if ("không" in answer.lower() and "dữ liệu" in answer.lower()) or len(answer) < 20:#kiem tra cau tra loi co chua "không" va "dữ liệu" hoac do dai cau tra loi nho hon 20
-                answer = _rich_fallback(question, context, "Tạm thời chưa đủ dữ liệu để kết luận chắc chắn.")#tra ve loi khuyen
-            else:#_expand_if_too_short kiem tra cau trl co ngan ko
-                answer = _expand_if_too_short(answer, question, context)#mo rong cau tra loi
+            answer_text, model_name, key_suffix = await call_gemini(question, context, chat_history=SESSION_CHAT_HISTORY.get(session_id, []))
+            print(f"\n[AI-DEBUG] Session: {session_id} | Model {model_name} | Key ...{key_suffix}")
+            
+            if "hiện tại mình chưa có dữ liệu về" in answer_text.lower() or len(answer_text) < 20:
+                answer = _rich_fallback(question, context, "Tạm thời chưa đủ dữ liệu để kết luận chắc chắn.")
+            else:
+                answer = _expand_if_too_short(answer_text, question, context)
+                
+            if session_id:
+                if session_id not in SESSION_CHAT_HISTORY:
+                    SESSION_CHAT_HISTORY[session_id] = []
+                SESSION_CHAT_HISTORY[session_id].append({"role": "user", "parts": [{"text": raw_question}]})
+                SESSION_CHAT_HISTORY[session_id].append({"role": "model", "parts": [{"text": answer_text}]})
+                # Giữ tối đa 10 lượt (5 hỏi, 5 đáp)
+                if len(SESSION_CHAT_HISTORY[session_id]) > 10:
+                    SESSION_CHAT_HISTORY[session_id] = SESSION_CHAT_HISTORY[session_id][-10:]
+            
     except HTTPException as e:#neu la loi HTTPException
         if e.status_code == 429:
             # Khi quota lỗi, bật cooldown để các request sau không tiếp tục spam Gemini.
@@ -292,9 +344,8 @@ async def process_chat(question: str, email: str = "", phone: str = "", top_k: i
     except Exception:
         answer = _rich_fallback(question, context, "Đang gặp lỗi hệ thống khi xử lý câu hỏi.")
 
-    # Chỉ ép 'bổ sung' nếu không phải là câu trả lời đã xác nhận là 'không tìm thấy'
-    if (len(answer.strip()) < 180 or answer.count("\n") < 2) and not ("không" in answer.lower() and "dữ liệu" in answer.lower()):
-        answer = _rich_fallback(question, context, "Mình bổ sung thêm thông tin liên quan từ dữ liệu:")
+    # Không ép fallback thủ công vào cuối nếu AI trả lại một câu trả lời thực tế, 
+    # ngoại trừ các trường hợp AI đã thông báo thiếu dữ liệu từ trước.
 
     answer = normalize_source_line(answer)#chuan hoa cau tra loi
     answer = append_video_to_answer(answer, question)#them video vao cau tra loi

@@ -32,19 +32,32 @@ class _InputBarState extends State<InputBar>
     _scaleAnimation = Tween<double>(begin: 1.0, end: 1.05).animate(
       CurvedAnimation(parent: _animController, curve: Curves.easeInOut),
     );
-    widget.controller.addListener(() {
-      if (widget.controller.text.isNotEmpty && !_isFocused) {
-        _animController.forward();
-        _isFocused = true;
-      } else if (widget.controller.text.isEmpty && _isFocused) {
-        _animController.reverse();
-        _isFocused = false;
-      }
-    });
+    widget.controller.addListener(_onTextChanged);
+  }
+
+  void _onTextChanged() {
+    if (!mounted) return;
+    if (widget.controller.text.isNotEmpty && !_isFocused) {
+      _animController.forward();
+      _isFocused = true;
+    } else if (widget.controller.text.isEmpty && _isFocused) {
+      _animController.reverse();
+      _isFocused = false;
+    }
+  }
+
+  @override
+  void didUpdateWidget(InputBar oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.controller != widget.controller) {
+      oldWidget.controller.removeListener(_onTextChanged);
+      widget.controller.addListener(_onTextChanged);
+    }
   }
 
   @override
   void dispose() {
+    widget.controller.removeListener(_onTextChanged);
     _animController.dispose();
     super.dispose();
   }

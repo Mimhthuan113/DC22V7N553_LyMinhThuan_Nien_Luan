@@ -45,7 +45,14 @@ def extract_text_from_html(html: str) -> str:#ham trich xuat text tu HTML
         soup = BeautifulSoup(html, 'html.parser')#tao soup de phan tich HTML
 
         # Ưu tiên lấy khu vực nội dung chính nếu có.
-        main = soup.find('main') or soup.find('article') or soup.body or soup
+        main = soup.find('main')
+        if not main:
+            articles = soup.find_all('article')
+            if articles:
+                # Lấy thẻ article có nội dung dài nhất (tránh lấy nhầm thẻ rỗng chứa icon đầu trang)
+                main = max(articles, key=lambda a: len(a.get_text(strip=True)))
+        if not main:
+            main = soup.body or soup
 
         # Xóa các tag/script/style/metadata và khu vực điều hướng.
         for tag in main(['script', 'style', 'meta', 'link', 'svg', 'noscript']):#xoa cac the html ko can thiet
@@ -69,6 +76,19 @@ def extract_text_from_html(html: str) -> str:#ham trich xuat text tu HTML
             if any(key in class_id for key in ['menu', 'nav', 'breadcrumb', 'sidebar', 'footer', 'header', 'pagination', 'search', 'share', 'social']):#kiem tra xem class_id co chua cac tu khoa nao ko
                 tag.decompose()#xoa the html
 
+        # Xử lý các bảng (Tables) trước khi lấy toàn bộ text
+        for table in main.find_all('table'):
+            table_text = []
+            for tr in table.find_all('tr'):
+                cells = [td.get_text(strip=True) for td in tr.find_all(['td', 'th'])]
+                if cells:
+                    table_text.append(" | ".join(cells))
+            # Thay thế bảng bằng text đã được định dạng
+            if table_text:
+                new_content = soup.new_tag("p")
+                new_content.string = "\n[TABLE_START]\n" + "\n".join(table_text) + "\n[TABLE_END]\n"
+                table.replace_with(new_content)
+
         text = main.get_text(separator='\n', strip=True)#lay text tu the html
 
         # Làm sạch text, bỏ trùng lặp và dòng nhiễu.các từ/phrase rác thường gặp trên web (menu, button, navbar).
@@ -85,8 +105,7 @@ def extract_text_from_html(html: str) -> str:#ham trich xuat text tu HTML
             lower = line.lower()
             if lower in noise:#kiem tra xem dong co chua cac tu khoa nao ko
                 continue#bo qua
-            if len(line) < 4:#kiem tra neu do dai dong nho hon 4
-                continue#bo qua
+            if len(line) < 2 and not line.isdigit():# Cho phép các số ngắn (chỉ tiêu)
                 continue
             if line.startswith(('===', '---', '***')):#kiem tra xem dong co chua cac ki tu dac biet ko
                 continue#bo qua
@@ -117,7 +136,7 @@ def clean_text(text: str) -> str:#ham lam sach text
     
     # 5. Strip whitespace từng line + remove junk lines
     lines = [ln.strip() for ln in text.split('\n')]#tach text thanh cac dong
-    lines = [ln for ln in lines if len(ln) > 3 and ln not in {#kiem tra xem do dai dong nho hon 4 va khong chua cac tu khoa nao ko
+    lines = [ln for ln in lines if (len(ln) >= 2 or ln.isdigit()) and ln not in {#kiem tra xem do dai dong >= 2 hoac la so và khong chua cac tu khoa nao ko
         'trang chủ', 'tin mới:', 'danh mục', 'tìm kiếm', 'xem thêm', 
         'liên hệ', 'thông báo', 'phu luc'
     }]
@@ -375,6 +394,10 @@ def scrape_all_pages() -> tuple:
         "147_nt_thuy_san": "https://tuyensinh.ctu.edu.vn/gioi-thieu-nganh/519-nuoi-trong-thuy-san.html",
         "148_nt_thuy_san_tt": "https://tuyensinh.ctu.edu.vn/gioi-thieu-nganh/746-nuoi-trong-thuy-san-chuong-trinh-tien-tien.html",
         "149_ql_thuy_san": "https://tuyensinh.ctu.edu.vn/gioi-thieu-nganh/521-quan-ly-thuy-san.html",
+        #ktx
+        "150_ktx": "https://ssc.ctu.edu.vn/hoat/160-cs1.html",
+        
+        
     }
     
     data = {}
@@ -477,12 +500,8 @@ def main():
     # Scrape dữ liệu
     data, major_videos = scrape_all_pages()
     
-    if not data:
-        print("❌ Không thể lấy dữ liệu từ website!")
-        return
-    
     # Lưu dữ liệu
-    print("\n📁 Đang lưu dữ liệu...")
+    print("\n📁 Đang cập nhật dữ liệu...")
     save_to_file(data, major_videos)
     
     print("\n✅ Hoàn thành!")

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/chat_message.dart';
 import '../services/api_service.dart';
 import 'widgets/chat_bottom_sheets.dart';
@@ -143,6 +144,30 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
       CurvedAnimation(parent: _fadeController, curve: Curves.easeInOut),
     );
     _fadeController.forward();
+    _loadSavedInfo();
+  }
+
+  Future<void> _loadSavedInfo() async {
+    final prefs = await SharedPreferences.getInstance();
+    final name = prefs.getString('user_name') ?? '';
+    final email = prefs.getString('user_email') ?? '';
+    final phone = prefs.getString('user_phone') ?? '';
+
+    if (name.isNotEmpty && email.isNotEmpty && phone.isNotEmpty && mounted) {
+      setState(() {
+        _nameController.text = name;
+        _emailController.text = email;
+        _phoneController.text = phone;
+        _infoSubmitted = true;
+        _messages.add(
+          ChatMessage(
+            text: 'Chào mừng $name quay trở lại! Bạn cần hỗ trợ gì thêm không?',
+            isUser: false,
+          ),
+        );
+      });
+      Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
+    }
   }
 
   @override
@@ -261,18 +286,31 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
       _messages.add(ChatMessage(text: greeting, isUser: false));
     });
 
+    SharedPreferences.getInstance().then((prefs) {
+      prefs.setString('user_name', name);
+      prefs.setString('user_email', email);
+      prefs.setString('user_phone', phone);
+    });
+
     Navigator.pop(context); // Đóng modal
     Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
   }
 
-  void _logout() {
-    setState(() {
-      _infoSubmitted = false;
-      _messages.clear();
-      _nameController.clear();
-      _emailController.clear();
-      _phoneController.clear();
-    });
+  void _logout() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('user_name');
+    await prefs.remove('user_email');
+    await prefs.remove('user_phone');
+
+    if (mounted) {
+      setState(() {
+        _infoSubmitted = false;
+        _messages.clear();
+        _nameController.clear();
+        _emailController.clear();
+        _phoneController.clear();
+      });
+    }
   }
 
   void _showInfoForm() {

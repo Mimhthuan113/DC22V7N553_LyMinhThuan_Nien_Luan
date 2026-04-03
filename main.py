@@ -1,6 +1,6 @@
 from typing import List
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -39,18 +39,23 @@ def health():#trả về trạng thái ok
 
 
 @app.get("/chat")#lấy câu trả lời từ AI
-async def chat_get(question: str, email: str = "", phone: str = "", top_k: int = 5):#lấy câu trả lời từ AI 
-    answer, sources = await process_chat(question=question, email=email, phone=phone, top_k=top_k)#lấy câu trả lời từ AI
-    return ChatResponse(answer=answer, context_used=sources)#trả về câu trả lời và nguồn
+async def chat_get(request: Request, question: str, email: str = "", phone: str = "", top_k: int = 5):#lấy câu trả lời từ AI 
+    client_ip = request.client.host if request.client else "unknown"
+    session_id = f"{client_ip}_{email}_{phone}"
+    answer, sources = await process_chat(question=question, email=email, phone=phone, top_k=top_k, session_id=session_id)
+    return ChatResponse(answer=answer, context_used=sources)
 
 
 @app.post("/chat")#lấy câu trả lời từ AI
-async def chat_post(req: ChatRequest) -> ChatResponse:#lấy câu trả lời từ AI 
-    answer, sources = await process_chat(#lấy câu trả lời từ AI 
-        question=req.question,#câu hỏi
-        email=req.email,#email
-        phone=req.phone,#số điện thoại
-        top_k=req.top_k,#số lượng ngữ cảnh
+async def chat_post(request: Request, req: ChatRequest) -> ChatResponse:#lấy câu trả lời từ AI 
+    client_ip = request.client.host if request.client else "unknown"
+    session_id = f"{client_ip}_{req.email}_{req.phone}"
+    answer, sources = await process_chat(
+        question=req.question,
+        email=req.email,
+        phone=req.phone,
+        top_k=req.top_k,
+        session_id=session_id
     )
     return ChatResponse(answer=answer, context_used=sources)#trả về câu trả lời và nguồn
 
@@ -58,4 +63,4 @@ async def chat_post(req: ChatRequest) -> ChatResponse:#lấy câu trả lời t�
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="[IP_ADDRESS]", port=8000)
