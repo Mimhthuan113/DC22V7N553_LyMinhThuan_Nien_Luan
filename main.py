@@ -10,6 +10,7 @@ from config import OFFICIAL_SOURCE_URL
 
 class ChatRequest(BaseModel):#định nghĩa cấu trúc dữ liệu câu hỏi gửi lên từ người dùng
     question: str = Field(..., min_length=1)#câu hỏi
+    session_id: str = "" #id phiên chat từ client
     email: str = ""#email
     phone: str = ""#số điện thoại
     top_k: int = Field(5, ge=1, le=20)#số lượng ngữ cảnh
@@ -39,23 +40,23 @@ def health():#trả về trạng thái ok
 
 
 @app.get("/chat")#lấy câu trả lời từ AI
-async def chat_get(request: Request, question: str, email: str = "", phone: str = "", top_k: int = 5):#lấy câu trả lời từ AI 
+async def chat_get(request: Request, question: str, email: str = "", phone: str = "", top_k: int = 5, session_id: str = ""):#lấy câu trả lời từ AI 
     client_ip = request.client.host if request.client else "unknown"
-    session_id = f"{client_ip}_{email}_{phone}"
-    answer, sources = await process_chat(question=question, email=email, phone=phone, top_k=top_k, session_id=session_id)
+    final_session_id = session_id if session_id else f"{client_ip}_{email}_{phone}"
+    answer, sources = await process_chat(question=question, email=email, phone=phone, top_k=top_k, session_id=final_session_id)
     return ChatResponse(answer=answer, context_used=sources)
 
 
 @app.post("/chat")#lấy câu trả lời từ AI
 async def chat_post(request: Request, req: ChatRequest) -> ChatResponse:#lấy câu trả lời từ AI 
     client_ip = request.client.host if request.client else "unknown"
-    session_id = f"{client_ip}_{req.email}_{req.phone}"
+    final_session_id = req.session_id if req.session_id else f"{client_ip}_{req.email}_{req.phone}"
     answer, sources = await process_chat(
         question=req.question,
         email=req.email,
         phone=req.phone,
         top_k=req.top_k,
-        session_id=session_id
+        session_id=final_session_id
     )
     return ChatResponse(answer=answer, context_used=sources)#trả về câu trả lời và nguồn
 

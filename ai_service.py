@@ -1,6 +1,7 @@
 import asyncio
 import random
 import time
+import re
 import unicodedata
 import httpx
 from datetime import datetime
@@ -138,7 +139,7 @@ async def call_gemini(question: str, context: List[str], chat_history: List[dict
                         params={"key": api_key}, #tham so truyen vao api gemini
                         json={
                             "contents": payload_contents,
-                            "generationConfig": {"temperature": 0.15, "maxOutputTokens": 1024},#nhiep do thap de tra loi chinh xac và gioi han cau tra loi la 1024
+                            "generationConfig": {"temperature": 0.15, "maxOutputTokens": 2048},#nhiep do thap de tra loi chinh xac và gioi han cau tra loi la 2048
                         },
                     )
                     if r.status_code == 200: #neu api tra ve thanh cong
@@ -243,7 +244,7 @@ def _rich_fallback(question: str, context: List[str], prefix: str) -> str:#ham l
 
     return (#tra ve cau tra loi
         f"{prefix}\n"#tra ve prefix
-        f"Hiện tại dữ liệu tuyển sinh chưa có thông tin cụ thể cho nội dung bạn hỏi.\n"#tra ve loi khuyen
+        f"Hiện tại dữ liệu tuyển sinh chưa có thông tin cụ thể cho nội dung em hỏi.\n"
         f"Vui lòng kiểm tra lại tên ngành hoặc xem thêm tại {OFFICIAL_SOURCE_URL}.\n"#tra ve loi khuyen
         f"Nguồn: {OFFICIAL_SOURCE_URL}"#tra ve nguon
     )
@@ -251,43 +252,59 @@ def _rich_fallback(question: str, context: List[str], prefix: str) -> str:#ham l
 #Hàm _expand_if_too_short là bước “hậu xử lý”: nếu câu trả lời từ AI quá ngắn hoặc thiếu chi tiết, 
 #nó sẽ tự bổ sung thêm thông tin từ dữ liệu local (context) để câu trả lời đầy đủ hơn.
 def _expand_if_too_short(answer: str, question: str, context: List[str]) -> str:
-    # Hậu xử lý: nếu AI trả lời quá ngắn thì bơm thêm bullet từ dữ liệu local.
-    if len(answer.strip()) >= 180 and answer.count("\n") >= 2:#kiem tra do dai cau tra loi va so dong
-        return answer#tra ve cau tra loi
-    picked = snippets(question, context, 4)#lay snippet tu context // snippet: đoạn trích ngắn
-    if not picked:#neu khong co snippet
-        return answer#tra ve cau tra loi
-    detail_lines = "\n".join(f"- {s}" for s in picked   )#tao danh sach snippet
-    return (
-        f"{answer.strip()}\n"#tra ve cau tra loi
-        f"Thông tin tham chiếu thêm từ dữ liệu:\n"#tra ve loi khuyen
-        f"{detail_lines}\n"#tra ve danh sach snippet
-        f"Để mình trả lời sát hơn, bạn có thể hỏi rõ theo tiêu chí: tổ hợp, chỉ tiêu, học phí, phương thức hoặc mốc thời gian.\n"#tra ve loi khuyen
-        f"Nguồn: {OFFICIAL_SOURCE_URL}"#tra ve nguon
-    )
+    # Đã bị vô hiệu hóa vì gây nhiễu snippet, chỉ cần trả nguyên đáp án của AI (phù hợp thiết bị di động).
+    return answer
 
 #dạng câu tra loi 
 async def process_chat(question: str, email: str = "", phone: str = "", top_k: int = 8, session_id: str = "") -> Tuple[str, List[str]]:
     raw_question = question
     # Xử lý nhớ ngành học từ câu hỏi trước nếu câu này không nhắc đến
     detected = catalog_major(question)
-    if not detected and session_id and session_id in SESSION_MAJOR_MEMORY:
+
+    
+    # Kiểm tra xem người dùng có đang hỏi rẽ sang một ngành lạ hay không
+    # Nếu câu hỏi có nhắc tới "ngành" hoặc "dạy" nhưng không phải "ngành này", "ngành đó"
+    import json
+    from pathlib import Path
+    from utils import _fold
+
+    q_lower = question.lower()
+    is_asking_new_major = ("ngành" in q_lower or "chuyên ngành" in q_lower or "đào tạo" in q_lower) and "ngành này" not in q_lower and "ngành đó" not in q_lower and "mã ngành" not in q_lower
+    
+    try:
+        abbr_path = Path("data") / "abbreviations.json"
+        if abbr_path.exists():
+            with open(abbr_path, "r", encoding="utf-8") as f:
+                nganh_dict = json.load(f).get("nganh_hoc", {})
+                if any(f" {k} " in f" {q_lower} " or f" {v} " in _fold(q_lower) for k, v in nganh_dict.items()):
+                    is_asking_new_major = True
+    except Exception:
+        pass
+
+    ai_question = question
+    # CHỈ nhồi ngành cũ nếu: (1) không nhận diện được ngành mới VÀ (2) không phải là đang hỏi rẽ sang hướng khác (is_asking_new_major)
+    if not detected and not is_asking_new_major and session_id and session_id in SESSION_MAJOR_MEMORY:
         last_major = SESSION_MAJOR_MEMORY[session_id]
-        question = f"Ngành {last_major} - " + question
+        ai_question = f"Về ngành {last_major}: " + question
 
     # Nếu câu hỏi hiện tại có ngành, lưu lại để ván sau còn nhớ
     if detected and session_id:
         major_line = detected[0]
         parts = major_line.split("|")
-        major_name = parts[2].strip() if len(parts) >= 3 else (major_line.split("-")[0].strip() if "-" in major_line else major_line.strip())
+        raw_name = parts[2].strip() if len(parts) >= 3 else (major_line.split("-")[0].strip() if "-" in major_line else major_line.strip())
+        # Rút gọn tên ngành để nhớ (bỏ phần dài dòng sau dấu phẩy/ngoặc)
+        major_name = raw_name.split(",")[0].split("(")[0].strip()
         SESSION_MAJOR_MEMORY[session_id] = major_name
+        
+    question_for_search = ai_question
 
     # Retrieval: lấy top-k ngữ cảnh phù hợp nhất từ kho TXT.
-    context = find_context(question, top_k)#lay top-k ngu canh phu hop nhat tu kho TXT
+    context = find_context(ai_question, top_k)#lay top-k ngu canh phu hop nhat tu kho TXT
     sources = source_names(context, 3)#lay ten nguon tu context
 
-    qf = _fold(question)
-    if "to hop" in qf and "xet tuyen" in qf:#kiem tra cau hoi co chua "to hop" va "xet tuyen"
+    qf = _fold(ai_question)
+    is_personal_struggle = any(w in qf for w in ["yeu", "kem", "kho", "lo", "so", "tu van", "chuyen", "rot", "truot"])
+    if "to hop" in qf and "xet tuyen" in qf and not is_personal_struggle:#kiem tra cau hoi co chua "to hop" va "xet tuyen" va khong can tu van
         combo_line = extract_combinations_from_context(context)#lay to hop xet tuyen tu context
         if combo_line:#neu co to hop xet tuyen
             answer = (
@@ -297,33 +314,55 @@ async def process_chat(question: str, email: str = "", phone: str = "", top_k: i
                 f"Nguồn: {OFFICIAL_SOURCE_URL}"#tra ve nguon
             )
             answer = normalize_source_line(answer)#chuan hoa cau tra loi
-            answer = append_video_to_answer(answer, question)#them video vao cau tra loi
-            _cache_set(question, answer)#luu cau tra loi vao cache
-            await log_to_google(email, phone, question, answer)#ghi log vao google sheet
+            answer = append_video_to_answer(answer, raw_question)#them video vao cau tra loi
+            _cache_set(raw_question, answer)#luu cau tra loi vao cache
+            await log_to_google(email, phone, raw_question, answer)#ghi log vao google sheet
             return answer, sources#tra ve cau tra loi va nguon
 
-    cached = _cache_get(question)#lay cau tra loi tu cache
+    cached = _cache_get(raw_question)#lay cau tra loi tu cache
     if cached:
         # Cache hit: trả nhanh và vẫn ghi log để theo dõi lịch sử hỏi đáp.
-        await log_to_google(email, phone, question, cached)#ghi log vao google sheet
+        await log_to_google(email, phone, raw_question, cached)#ghi log vao google sheet
         return cached, sources#tra ve cau tra loi va nguon
 
     try:
         if _gemini_in_cooldown():#kiem tra gemini co trong cooldown
             # Trong cooldown thì bỏ qua gọi AI, trả fallback local ngay.
             answer = _rich_fallback( #tra ve loi khuyen
-                question,
+                ai_question,
                 context,
                 "Hệ thống AI đang tạm giới hạn quota, mình trả lời bằng dữ liệu cục bộ trong lúc chờ mở lại.",#tra ve loi khuyen
             )
         else:
-            answer_text, model_name, key_suffix = await call_gemini(question, context, chat_history=SESSION_CHAT_HISTORY.get(session_id, []))
+            answer_text, model_name, key_suffix = await call_gemini(ai_question, context, chat_history=SESSION_CHAT_HISTORY.get(session_id, []))
             print(f"\n[AI-DEBUG] Session: {session_id} | Model {model_name} | Key ...{key_suffix}")
             
-            if "hiện tại mình chưa có dữ liệu về" in answer_text.lower() or len(answer_text) < 20:
-                answer = _rich_fallback(question, context, "Tạm thời chưa đủ dữ liệu để kết luận chắc chắn.")
+            # Trường hợp 1: Gemini đã xác nhận ngành không tồn tại → giữ nguyên câu trả lời đúng
+            _GEMINI_NO_DATA_PHRASES = [
+                "chưa có dữ liệu về ngành",
+                "không có ngành",
+                "trường không có ngành",
+                "không đào tạo ngành",
+                "chưa đào tạo ngành",
+                "chưa có thông tin về ngành",
+                "đh cần thơ chưa có ngành",
+                "chưa có ngành",
+                "chưa có ngành này",
+                "trường hiện chưa đào tạo",
+            ]
+            _gemini_said_no_data = any(p in answer_text.lower() for p in _GEMINI_NO_DATA_PHRASES)
+            
+            if _gemini_said_no_data:
+                # Gemini đã trả lời đúng về ngành không tồn tại → không cần fallback
+                answer = answer_text.strip()
+                if not answer.endswith(OFFICIAL_SOURCE_URL):
+                    answer += f"\nNguồn: {OFFICIAL_SOURCE_URL}"
+            elif len(answer_text.strip()) < 20:
+                # Trường hợp 2: Gemini trả lời rỗng/quá ngắn → dùng rich fallback
+                answer = _rich_fallback(ai_question, context, "Tạm thời chưa đủ dữ liệu để kết luận chắc chắn.")
             else:
-                answer = _expand_if_too_short(answer_text, question, context)
+                # Trường hợp 3: Gemini trả lời bình thường → expand nếu cần
+                answer = _expand_if_too_short(answer_text, ai_question, context)
                 
             if session_id:
                 if session_id not in SESSION_CHAT_HISTORY:
@@ -333,23 +372,23 @@ async def process_chat(question: str, email: str = "", phone: str = "", top_k: i
                 # Giữ tối đa 10 lượt (5 hỏi, 5 đáp)
                 if len(SESSION_CHAT_HISTORY[session_id]) > 10:
                     SESSION_CHAT_HISTORY[session_id] = SESSION_CHAT_HISTORY[session_id][-10:]
-            
+                
     except HTTPException as e:#neu la loi HTTPException
         if e.status_code == 429:
             # Khi quota lỗi, bật cooldown để các request sau không tiếp tục spam Gemini.
             _start_gemini_cooldown()
-            answer = _rich_fallback(question, context, "Hệ thống AI đang quá tải, mình chuyển sang trả lời từ dữ liệu cục bộ.")
+            answer = _rich_fallback(ai_question, context, "Hệ thống AI đang quá tải, mình chuyển sang trả lời từ dữ liệu cục bộ.")
         else:
-            answer = _rich_fallback(question, context, "Đang gặp lỗi hệ thống khi tạo câu trả lời tự động.")
+            answer = _rich_fallback(ai_question, context, "Đang gặp lỗi hệ thống khi tạo câu trả lời tự động.")
     except Exception:
-        answer = _rich_fallback(question, context, "Đang gặp lỗi hệ thống khi xử lý câu hỏi.")
+        answer = _rich_fallback(ai_question, context, "Đang gặp lỗi hệ thống khi xử lý câu hỏi.")
 
     # Không ép fallback thủ công vào cuối nếu AI trả lại một câu trả lời thực tế, 
     # ngoại trừ các trường hợp AI đã thông báo thiếu dữ liệu từ trước.
 
     answer = normalize_source_line(answer)#chuan hoa cau tra loi
-    answer = append_video_to_answer(answer, question)#them video vao cau tra loi
+    answer = append_video_to_answer(answer, raw_question)#them video vao cau tra loi
 
-    _cache_set(question, answer)#luu cau tra loi vao cache
-    await log_to_google(email, phone, question, answer)#ghi log vao google sheet
+    _cache_set(raw_question, answer)#luu cau tra loi vao cache
+    await log_to_google(email, phone, raw_question, answer)#ghi log vao google sheet
     return answer, sources#tra ve cau tra loi va nguon

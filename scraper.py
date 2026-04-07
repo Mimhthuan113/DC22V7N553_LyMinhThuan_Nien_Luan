@@ -396,7 +396,8 @@ def scrape_all_pages() -> tuple:
         "149_ql_thuy_san": "https://tuyensinh.ctu.edu.vn/gioi-thieu-nganh/521-quan-ly-thuy-san.html",
         #ktx
         "150_ktx": "https://ssc.ctu.edu.vn/hoat/160-cs1.html",
-        
+        # 13. Giới thiệu chung
+        "151_ly_do_hoc_dhct": "https://tuyensinh.ctu.edu.vn/gioi-thieu/839-ly-do-de-hoc-tai-truong-dhct.html",
         
     }
     
@@ -491,7 +492,7 @@ def save_to_file(data: dict, major_videos: List[Dict[str, str]]) -> None:#ham lu
         print(f"🎬 Lưu video ngành: {json_path} ({len(major_videos)} mục)")
 
 #cau dan chay
-def main():
+def main(): 
     """Chạy scraper"""
     print("=" * 60)
     print("🚀 SCRAPER DỮ LIỆU TUYỂN SINH ĐH CẦN THƠ")

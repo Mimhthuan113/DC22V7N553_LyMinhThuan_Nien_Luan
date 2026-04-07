@@ -139,7 +139,11 @@ def _chunks(text: str, max_chars: int = 800) -> List[str]:#ham chia text thanh c
 #_score: ham tinh diem cho chunk
 def _score(chunk: str, keys: List[str]) -> int:#ham tinh diem cho chunk
     c = _fold(chunk)#lam sach chunk bo giau tieng viet vs dac biet ra
-    return sum(c.count(_fold(k)) for k in keys)#tinh diem cho chunk Với mỗi keyword k Đếm số lần xuất hiện trong chunk Cộng lại tất cả
+    score = 0
+    for k in keys:
+        kf = _fold(k)
+        score += len(re.findall(rf"\b{re.escape(kf)}\b", c))
+    return score
 
 
 #_insert_before_source: ham chen text vao truoc nguon
@@ -261,15 +265,15 @@ def extract_combinations_from_context(context: List[str]) -> str:
                 if ":" in ln:
                     right = ln.split(":", 1)[1].strip(" -;.")
                     if right and len(right) >= 8:
-                        return right
+                        return right.replace('+', '').strip()
                 if i + 1 < len(lines):
                     nxt = lines[i + 1].strip(" -;.")
                     if re.search(r"\([A-Z0-9]{2,4}\)", nxt) or re.search(r"\b[A-Z][0-9]{2}\b", nxt):
-                        return nxt
+                        return nxt.replace('+', '').strip()
 
             # Một số file ghi trực tiếp dòng tổ hợp không có tiêu đề ngay trước đó.
             if re.search(r"\([A-Z0-9]{2,4}\)", ln) and ";" in ln and "," in ln:
-                return ln.strip(" -;.")
+                return ln.strip(" -;.").replace('+', '').strip()
     return ""
 
 
@@ -286,7 +290,7 @@ def major_seed_context(question: str) -> List[str]:
         parts = lines[0].split("|")
         major_name = parts[2].strip() if len(parts) >= 3 else lines[0].strip()
     else:
-        major_name = lines[0].split("-")[0].strip() if "-" in lines[0] else lines[0].strip()
+        major_name = lines[0].strip()
         
     major_slug = _fold(major_name).replace(" ", "_")
     
