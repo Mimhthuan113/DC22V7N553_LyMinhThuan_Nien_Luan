@@ -90,7 +90,11 @@ DC22V7N553_LyMinhThuan_Nien_Luan/
 **Bước 1:** Sao chép file cấu hình và điền API Key của bạn
 
 ```bash
+# Windows
 copy .env.example .env
+# Mac/Linux
+cp .env.example .env
+
 # Sau đó mở file .env và thay YOUR_KEY vào GEMINI_API_KEY
 ```
 
@@ -126,7 +130,11 @@ pip install -r requirements.txt
 #### Bước 2: Cấu hình biến môi trường
 
 ```bash
+# Windows
 copy .env.example .env
+# Mac/Linux
+cp .env.example .env
+
 # Mở file .env và điền GEMINI_API_KEY của bạn vào
 ```
 
