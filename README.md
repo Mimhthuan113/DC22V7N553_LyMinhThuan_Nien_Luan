@@ -148,7 +148,7 @@ python scraper.py
 #### Bước 4: Khởi động Backend
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 #### Bước 5: Chạy Frontend (Flutter Web)
